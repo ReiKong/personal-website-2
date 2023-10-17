@@ -1,2 +1,3 @@
 # ReiKong.github.io
-personal website
+
+things coming soon :)

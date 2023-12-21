@@ -14,9 +14,8 @@ const themes = [
 export default function SideBar() {
     return(
         <div id="left">
-            <span class="font-serif text-accent text-[54px]">R<span class="font-serif text-accent italic">e</span>i K<span class="font-serif italic">o</span>ng</span>
+            <span className="font-serif text-accent text-[54px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif italic">o</span>ng</span>
             <ScrollLink
-                onClick={() => setIsOpen(false)}
                 to="about"
                 spy={true}
                 smooth={true}
@@ -26,7 +25,6 @@ export default function SideBar() {
                 <sup>01</sup>  About
             </ScrollLink>
             <ScrollLink
-                onClick={() => setIsOpen(false)}
                 to="experience"
                 spy={true}
                 smooth={true}
@@ -36,7 +34,6 @@ export default function SideBar() {
                 <sup>02</sup>  Experience
             </ScrollLink>
             <ScrollLink
-                onClick={() => setIsOpen(false)}
                 to="education"
                 spy={true}
                 smooth={true}
@@ -46,7 +43,6 @@ export default function SideBar() {
                 <sup>03</sup>  Education
             </ScrollLink>
             <ScrollLink
-                onClick={() => setIsOpen(false)}
                 to="education"
                 spy={true}
                 smooth={true}
@@ -56,7 +52,6 @@ export default function SideBar() {
                 <sup>04</sup>  Skills
             </ScrollLink>
             <ScrollLink
-                onClick={() => setIsOpen(false)}
                 to="education"
                 spy={true}
                 smooth={true}

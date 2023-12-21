@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://use.typekit.net/bfo0ccc.css");
+
+@layer base {
+  html[data-theme='beige'] {
+    primary: 244, 241, 234;
+    secondary1: 67, 43, 14 / 1;
+    secondary2: 67, 43, 14 / 0.7;
+    secondary3: 67, 43, 14 / 0.3;
+    accent: 223, 68, 68;
+  }
+
+  html[data-theme='brown'] {
+    primary: 56, 42, 35;
+    secondary1: 244, 241, 234 / 1;
+    secondary2: 244, 241, 234 / 0.7;
+    secondary3: 244, 241, 234 / 0.3;
+    accent: 229, 160, 173;
+  }
+
+  html[data-theme='navy'] {
+    primary: 36, 52, 84;
+    secondary1: 135, 167, 228 / 1;
+    secondary2: 135, 167, 228 / 0.7;
+    secondary3: 135, 167, 228 / 0.3;
+    accent: 255, 255, 255;
+  }
+
+  html[data-theme='white'] {
+    primary: 2208, 216, 204;
+    secondary1: 55, 70, 48 / 1;
+    secondary2: 55, 70, 48 / 0.7;
+    secondary3: 55, 70, 48 / 0.3;
+    accent: 255, 255, 255;
+  }
+
+  html[data-theme='lightgreen'] {
+    primary: 36, 52, 84;
+    secondary1: 135, 167, 228 / 1;
+    secondary2: 135, 167, 228 / 0.7;
+    secondary3: 135, 167, 228 / 0.3;
+    accent: 255, 255, 255;
+  }
+}
+
+:root, html[data-theme='beige'] {
+  primary: 244, 241, 23;
+  secondary1: 67, 43, 14 / 1;
+  secondary2: 67, 43, 14 / 0.7;
+  secondary3: 67, 43, 14 / 0.3;
+  accent: 223, 68, 68;
+}
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+
+html, body {
+  background-color: #F4F1EA;
+  font-family: "Acumin Pro";
+  color: #432B0E;
+  height: 100%;
+}
+
+h1, h2, h3, h4, p, span {
+  font-family: "Acumin Pro";
+}
+
+.sweIndex {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  height: 100%;
+}
+
+.titleH1 {
+  @apply text-accent text-[54px]
+}
+
+.sideBarLink {
+  color: #432B0E;
+  font-size: 18px;
+  line-height: 130%; /* 31.2px */
+  text-decoration-line: underline;
+  width: 100%;
+}
+
+#left {
+  flex: 0 1 30%;
+  padding: 40px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+  height: 100%;
+  min-width: 300px;
+}
+
+#right {
+  position: absolute;
+  left: 30%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  padding: 40px;
+}
+
+#header {
+  display: flex;
+  height: calc(100vh - 40px);
+  padding-bottom: 40px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.headerText {
+  display: inline;
+}
+
+.h1Header, .h1Header2 {
+  color: #432B0E;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105%; /* 75.6px */
+  overflow-wrap: normal;
+
+}
+
+.h1Header2 {
+  font-family: "Meno Banner Condensed";
+  font-style: italic;
+}
+
+#education, #skills {
+  display: flex;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+div.sectionHeader {
+  border-bottom: 1px solid #432B0E;
+  width: 100%
+}
+
+h2.sectionHeader {
+  @apply text-primary font-serif;
+  font-family: Meno Banner Extra Condensed;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%; /* 27.3px */
+  text-transform: uppercase;
+}
+
+.sectionSubheader {
+  @apply text-primary font-serif;
+  font-family: Acumin Pro;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105%; /* 31.5px */
+  text-transform: uppercase;
+}
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  align-self: stretch;
+}
+
+.500 {
+  font-weight: 500;
+}
+
+.coursework, .activities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.two5050Columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.educationComputerScienceColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+}
+
+.educationArtsColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1 0 0;
+}
+
+.educationSociologySection, .educationCognitiveScienceSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 4px;
+}
+
+.tableHeader {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(67, 43, 14, 1);
+  width: 100%;
+}
+
+div.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 4px;
+}
+
+p.table, span.table {
+  border-bottom: 1px solid rgba(67, 43, 14, 0.30);
+  width: 100%;
+}
+
+span.table span.uppercase {
+  text-transform: uppercase;
+}
+
+.three333333Columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.child33Column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+}

@@ -4,17 +4,12 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { BsCircleFill } from "react-icons/bs";
-
-const themes = [
-    { name: "Beige" },
-    { name: "Brown" },
-    { name: "Navy" },
-]
+import ThemeChanger from "../components/Theme";
 
 export default function SideBar() {
     return(
         <div id="left">
-            <span className="font-serif text-primary text-[54px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif italic">o</span>ng</span>
+            <span className="font-serif text-th-primary text-[54px]">R<span className="font-serif text-th-accent italic">e</span>i K<span className="font-serif italic">o</span>ng</span>
             <ScrollLink
                 to="about"
                 spy={true}
@@ -65,6 +60,7 @@ export default function SideBar() {
                     <ul>
                         <li>
                             <BsCircleFill class="w-20 h-20" />
+                            <ThemeChanger />
                         </li>
                     </ul>
                 </div>

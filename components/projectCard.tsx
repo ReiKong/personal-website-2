@@ -14,11 +14,11 @@ export default function projectCard({
     techStack: string;
 }) {
     return (
-        <div className="border border-secondary1 flex-col justify-start items-start gap-2.5 inline-flex">
+        <div className="border border-th-secondary1 flex-col justify-start items-start gap-2.5 inline-flex">
             <div></div>
             <div className="px-2.5 pb-2.5 flex-col justify-start items-start gap-2.5 inline-flex">
                 <p className="font-medium text-[20px]">{title}</p>
-                <p className="text-secondary2">{description}</p>
+                <p className="text-th-secondary2">{description}</p>
                 <p>{techStack}</p>
             </div>
         </div>

@@ -4,71 +4,69 @@
 
 @import url("https://use.typekit.net/bfo0ccc.css");
 
-@layer base {
-  html[data-theme='beige'] {
-    --color-primary: 244, 241, 234 / 1;
-    --color-secondary1: 67, 43, 14 / 1;
-    --color-secondary2: 67, 43, 14 / 0.7;
-    --color-secondary3: 67, 43, 14 / 0.3;
-    --color-accent: 223, 68, 68 / 1;
-  }
-
-  html[data-theme='brown'] {
-    --color-primary: 56, 42, 35 / 1;
-    --color-secondary1: 244, 241, 234 / 1;
-    --color-secondary2: 244, 241, 234 / 0.7;
-    --color-secondary3: 244, 241, 234 / 0.3;
-    --color-accent: 229, 160, 173 / 1;
-  }
-
-  html[data-theme='navy'] {
-    --color-primary: 36, 52, 84 / 1;
-    --color-secondary1: 135, 167, 228 / 1;
-    --color-secondary2: 135, 167, 228 / 0.7;
-    --color-secondary3: 135, 167, 228 / 0.3;
-    --color-accent: 255, 255, 255 / 1;
-  }
-
-  html[data-theme='white'] {
-    --color-primary: 208, 216, 204 / 1;
-    --color-secondary1: 55, 70, 48 / 1;
-    --color-secondary2: 55, 70, 48 / 0.7;
-    --color-secondary3: 55, 70, 48 / 0.3;
-    --color-accent: 255, 255, 255 / 1;
-  }
-
-  html[data-theme='lightgreen'] {
-    --color-primary: 36, 52, 84 / 1;
-    --color-secondary1: 135, 167, 228 / 1;
-    --color-secondary2: 135, 167, 228 / 0.7;
-    --color-secondary3: 135, 167, 228 / 0.3;
-    --color-accent: 255, 255, 255 / 1;
-  }
-}
-
-:root, html[data-theme='beige'] {
+:root {
   --color-primary: 244, 241, 23 / 1;
   --color-secondary1: 67, 43, 14 / 1;
   --color-secondary2: 67, 43, 14 / 0.7;
   --color-secondary3: 67, 43, 14 / 0.3;
   --color-accent: 223, 68, 68 / 1;
 }
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --foreground-rgb: 255, 255, 255;
-      --background-start-rgb: 0, 0, 0;
-      --background-end-rgb: 0, 0, 0;
-    }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
+}
+
+[data-theme='beige'] {
+  --color-primary: 244, 241, 234;
+  --color-secondary1: 67, 43, 14;
+  --color-secondary2: 67, 43, 14;
+  --color-secondary3: 67, 43, 14;
+  --color-accent: 223, 68, 68;
+}
+
+[data-theme='brown'] {
+  --color-primary: 56, 42, 35;
+  --color-secondary1: 244, 241, 234;
+  --color-secondary2: 244, 241, 234;
+  --color-secondary3: 244, 241, 234;
+  --color-accent: 229, 160, 173;
+}
+
+[data-theme='navy'] {
+  --color-primary: 36, 52, 84;
+  --color-secondary1: 135, 167, 228;
+  --color-secondary2: 135, 167, 228;
+  --color-secondary3: 135, 167, 228;
+  --color-accent: 255, 255, 255;
+}
+
+[data-theme='white'] {
+  --color-primary: 208, 216, 204 / 1;
+  --color-secondary1: 55, 70, 48 / 1;
+  --color-secondary2: 55, 70, 48 / 0.7;
+  --color-secondary3: 55, 70, 48 / 0.3;
+  --color-accent: 255, 255, 255 / 1;
+}
+
+[data-theme='lightgreen'] {
+  --color-primary: 36, 52, 84 / 1;
+  --color-secondary1: 135, 167, 228 / 1;
+  --color-secondary2: 135, 167, 228 / 0.7;
+  --color-secondary3: 135, 167, 228 / 0.3;
+  --color-accent: 255, 255, 255 / 1;
+}
 
 html, body {
-  @apply bg-primary;
+  @apply bg-th-primary;
   height: 100%;
 }
 
 h1, h2, h3, h4, p, span {
-  @apply font-sans text-secondary1;
+  @apply font-sans text-th-secondary1;
 }
 
 .sweIndex {
@@ -152,7 +150,7 @@ div.sectionHeader {
 }
 
 h2.sectionHeader {
-  @apply text-primary font-serif;
+  @apply text-th-primary font-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -161,7 +159,7 @@ h2.sectionHeader {
 }
 
 .sectionSubheader {
-  @apply text-primary font-serif;
+  @apply text-th-primary font-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 500;

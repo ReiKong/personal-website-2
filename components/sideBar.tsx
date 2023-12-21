@@ -14,7 +14,7 @@ const themes = [
 export default function SideBar() {
     return(
         <div id="left">
-            <span className="font-serif text-accent text-[54px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif italic">o</span>ng</span>
+            <span className="font-serif text-primary text-[54px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif italic">o</span>ng</span>
             <ScrollLink
                 to="about"
                 spy={true}
@@ -43,7 +43,7 @@ export default function SideBar() {
                 <sup>03</sup>  Education
             </ScrollLink>
             <ScrollLink
-                to="education"
+                to="skills"
                 spy={true}
                 smooth={true}
                 offset={-5}
@@ -52,7 +52,7 @@ export default function SideBar() {
                 <sup>04</sup>  Skills
             </ScrollLink>
             <ScrollLink
-                to="education"
+                to="projects"
                 spy={true}
                 smooth={true}
                 offset={-5}

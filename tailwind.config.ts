@@ -5,21 +5,20 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './data/*.{js}'
   ],
   theme: {
     extend: {
       colors: {
-        primary: 'rgb(var(--color-primary) / <alpha-value>)',
-        secondary1: 'rgb(var(--color-text1) / <alpha-value>)',
-        secondary2: 'rgb(var(--color-text2) / <alpha-value>)',
-        secondary3: 'rgb(var(--color-text3) / <alpha-value>)',
-        accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary) / 1)',
+        secondary1: 'rgb(var(--color-secondary1) / 1)',
+        secondary2: 'rgb(var(--color-secondary2) / 0.7)',
+        secondary3: 'rgb(var(--color-secondary3) / 0.3)',
+        accent: 'rgb(var(--color-accent) / 1)',
       },
       fontFamily: {
-        'sans': ['"Acumin Pro"'],
-        'serif': ['"Meno Banner Condensed"'],
-        'body': ['"Acumin Pro"'],
+        'sans': ["Acumin Pro", "sans-serif"],
+        'serif': ["Meno Banner Condensed", "serif"],
+        'body': ["Acumin Pro", "sans-serif"],
       },
     },
   },

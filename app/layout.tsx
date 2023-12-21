@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { useTheme } from 'next-themes'
 import '../styles/globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Rei Kong',
@@ -14,9 +13,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en" data-theme="beige">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-primary">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

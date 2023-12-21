@@ -5,6 +5,13 @@ export default function projectCard({
     githubLink,
     description,
     techStack
+}: {
+    imageSrc: string;
+    title: string;
+    projectLink: string;
+    githubLink: string;
+    description: string;
+    techStack: string;
 }) {
     return (
         <div class="border border-secondary1 flex-col justify-start items-start gap-2.5 inline-flex">

@@ -26,8 +26,22 @@ const config: Config = {
       transitionProperty: {
         'height': 'height',
       },
+      animation: {
+        rise: 'rise 1.3s ease',
+        growDown: 'growDown 300ms ease-in-out forwards'
+        }
+      },
+      keyframes: {
+        rise: {
+          '0%': { transform: 'translate(0%,150%) skewX(0deg)' },
+          '100%': { transform: 'translate(0%,0%) skewX(0deg)' },
+        },
+        growDown: {
+          '0%': { transform: 'scaleY(0)' },
+          '100%': { transform: 'scaleY(1)' },
+        }
+      },
     },
-  },
   plugins: [
     require('@tailwindcss/typography'),
   ],

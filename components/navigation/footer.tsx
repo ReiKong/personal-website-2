@@ -8,6 +8,7 @@ import {
 } from "react-icons/bs";
 import { IconContext } from "react-icons";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 
 const options = {
     duration: 500,
@@ -23,7 +24,11 @@ export default function footer() {
             </div>
             <div className="flex-cols gap-y-4">
                 <div className="text-primary/60 text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
-                <div className="text-primary text-[64px] font-semibold font-serif leading-[1em]">reiskongs[at]gmail.com</div>
+                <a 
+                    className="text-primary text-[64px] font-semibold font-serif leading-[1em] hover:bg-primary hover:text-secondary1"
+                    href="mailto:reiskongs@gmail.com"
+                >
+                    reiskongs[at]gmail.com</a>
             </div>
             <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             <div className="justify-center items-start gap-2.5 inline-flex">
@@ -64,6 +69,25 @@ export default function footer() {
                         </div>
                     </IconContext.Provider>
                 </Link>
+            </div>
+            <div className="flex flex-col">
+                {[
+                    ['about', '01', 'About'],
+                    ['experience', '02', 'Experience'],
+                    ['education', '03', 'Education'],
+                    ['skills', '04', 'Skills'],
+                    ['projects', '05', 'Projects'],
+                ].map(([section, index, name]) => (
+                    <ScrollLink
+                        to={section}
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={400}
+                        className="text-primary">
+                        <sup></sup>  {name}
+                    </ScrollLink>
+                ))}
             </div>
             <div>
                 <p className="text-primary text-[16px]">© Rei Kong 2023</p>

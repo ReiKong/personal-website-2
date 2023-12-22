@@ -9,7 +9,9 @@ export default function Header() {
                     </Link>
                 </button>
                 <div className="w-[100%]">
-                    <h1 className="h1Header inline-block">DEVELOPER <span className="font-serif italic">&</span> DESIGNER.</h1>
+                    <div className="overflow-hidden">
+                        <h1 className="h1Header inline-block animate-rise">DEVELOPER <span className="font-serif italic">&</span> DESIGNER.</h1>
+                    </div>
                     <h1 className="h1Header">CURRENTLY IN MONTRÉAL.</h1>
                     <h1 className="h1Header text-secondary1">
                     <span className="font-serif italic text-secondary1 inline-block">&nbsp;STUDYING&nbsp;</span>

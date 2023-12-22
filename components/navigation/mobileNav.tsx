@@ -7,6 +7,7 @@ import { BsCircleFill } from "react-icons/bs";
 import ThemeChanger from "../../components/Theme";
 
 export default function MobileMenu() {
+    const openMenuHeight = `calc(100vh-54px)`;
     const [open, setOpen] = useState('Menu');
     const [visible, setVisible] = useState('hidden');
     const [height, setHeight] = useState('0vh');
@@ -16,7 +17,7 @@ export default function MobileMenu() {
         if (open == 'Menu') {
             setOpen('Close');
             setVisible('flex flex-col');
-            setHeight('calc(100vh_-_54px)');
+            setHeight('screenMinus54');
             setNoScroll(true);
         } else {
             setOpen('Menu');
@@ -33,7 +34,7 @@ export default function MobileMenu() {
       }, [noScroll]);
 
     return (
-        <div className="w-[100%] h-[100%] top-0 sticky z-[3] pt-[4px] bg-primary flex flex-col sm:hidden">
+        <div className="w-[100%] top-0 sticky z-[3] pt-[4px] bg-primary flex flex-col sm:hidden">
             <div className="border-b-[1px] border-b-secondary1 px-[40px] h-[50px]">
                 <h2
                     className="text-secondary1 font-serif uppercase tracking-tighter text-[30px] hover:text-accent-500 transition duration-200 hover:cursor-pointer"
@@ -43,7 +44,7 @@ export default function MobileMenu() {
                 </h2>
             </div>
             
-            <div className={`border-b-[0px] h-[${height}] ${visible} sm:hidden sm:h-[0px] transition-[height] duration-400 ease-out`}>
+            <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh]`}>
                 <ScrollLink
                     to="about"
                     spy={true}

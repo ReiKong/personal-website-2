@@ -151,6 +151,24 @@ h1, h2, h3, h4, p, span {
   @apply text-primary bg-accent-500;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-500;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-600;
+}
+
 .sideBarLink {
   @apply text-secondary1 text-[18px] border-b-[1px] border-secondary2 pt-1 transition-colors hover:text-accent-500 hover:cursor-pointer hover:border-b-accent-500;
   line-height: 130%; /* 31.2px */
@@ -262,6 +280,12 @@ p.table, span.table {
 .scrollToTop {
   @apply fixed top-[16px] right-[16px] flex;
   writing-mode: vertical-ltr;
+}
+
+@layer utilities {
+  .screenMinus54 {
+    height: calc(100vh - 54px);
+  }
 }
 
 @media only screen and (max-width: 600px) {

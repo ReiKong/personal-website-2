@@ -56,14 +56,7 @@ export default function SideBar() {
                 <sup>05</sup>  Projects
             </ScrollLink>
             <div>
-                <div>
-                    <ul>
-                        <li>
-                            <BsCircleFill class="w-20 h-20" />
-                            <ThemeChanger />
-                        </li>
-                    </ul>
-                </div>
+                <ThemeChanger />
             </div>
         </div>
     )

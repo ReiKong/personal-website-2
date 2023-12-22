@@ -1,4 +1,13 @@
+"use client";
+
 import { animateScroll } from "react-scroll"
+import { 
+    BsLinkedin,
+    BsGithub,
+    BsFileEarmarkFill,
+} from "react-icons/bs";
+import { IconContext } from "react-icons";
+import Link from "next/link";
 
 const options = {
     duration: 500,
@@ -11,10 +20,43 @@ export default function footer() {
             <div className="text-stone-100 text-[64px] font-semibold font-serif">Thanks for coming! Let’s get in touch!</div>
             <div className="text-stone-100 text-xl font-medium font-sans">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             <div className="justify-center items-start gap-2.5 inline-flex">
-                <div className="w-[26px] h-[26px] bg-stone-100"></div>
-                <div className="w-[26px] h-[26px] bg-stone-100"></div>
-                <div className="w-[26px] h-[26px] bg-stone-100"></div>
-                <div className="w-[26px] h-[26px] bg-stone-100"></div>
+                <a
+                    className="text-primary"
+                    href="https://github.com/ReiKong"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    <IconContext.Provider value={{ size: "22px" }}>
+                        <div>
+                            <BsGithub />
+                        </div>
+                    </IconContext.Provider>
+                </a>
+
+                <a
+                    className="text-primary"
+                    href="https:///www.linkedin.com/in/rei-kong/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    <IconContext.Provider value={{ size: "22px" }}>
+                        <div>
+                            <BsLinkedin />
+                        </div>
+                    </IconContext.Provider>
+                </a>
+
+                <Link
+                    className="text-primary"
+                    href="/rei_kong_resume.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener">
+                    <IconContext.Provider value={{ size: "22px" }}>
+                        <div>
+                            <BsFileEarmarkFill />
+                        </div>
+                    </IconContext.Provider>
+                </Link>
             </div>
         </div>
     )

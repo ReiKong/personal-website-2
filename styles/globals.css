@@ -161,8 +161,6 @@ h1, h2, h3, h4, p, span {
   width: 100%;
 }
 
-
-
 #header {
   height: calc(100vh - 40px);
 }
@@ -172,7 +170,7 @@ h1, h2, h3, h4, p, span {
 }
 
 .h1Header {
-  @apply text-secondary1 text-[54px];
+  @apply text-secondary1 text-[54px] tracking-[-0.07em];
   font-style: normal;
   font-weight: 500;
   line-height: 105%; /* 75.6px */
@@ -283,4 +281,23 @@ p.table, span.table {
   align-items: flex-start;
   gap: 10px;
   flex: 1 0 0;
+}
+
+.mobileMenu {
+  @apply w-[100%] h-[100%] top-0 sticky px-[40px] bg-secondary1 text-primary hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  #left {
+    display: none;
+  }
+
+  .sweIndex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileMenu {
+    @apply flex;
+  }
 }

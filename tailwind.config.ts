@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary": 'var(--primary)',
-        "secondary1": 'var(--secondary1)',
-        "secondary2": 'var(--secondary2)',
-        "secondary3": 'var(--secondary3)',
-        "accent": 'var(--accent)',
+        "primary": 'rgb(var(--primary) / 1)',
+        "secondary1": 'rgb(var(--secondary1) / 1)',
+        "secondary2": 'rgb(var(--secondary2) / 0.7)',
+        "secondary3": 'rgb(var(--secondary3) / 0.3)',
+        "accent": 'rgb(var(--accent) / 1)',
       },
       fontFamily: {
         'sans': ["Acumin Pro", "sans-serif"],

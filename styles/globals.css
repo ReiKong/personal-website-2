@@ -7,8 +7,8 @@
 :root {
   --primary: rgb(244, 241, 234);
   --secondary1: rgb(67, 43, 14);
-  --secondary2: rgb(67, 43, 14);
-  --secondary3: rgb(67, 43, 14);
+  --secondary2: rgb(67, 43, 14 / 0.7);
+  --secondary3: rgb(67, 43, 14 / 0.3);
   --accent: rgb(223, 68, 68);
 }
 
@@ -31,8 +31,8 @@
 [data-theme='brown'] {
   --primary: rgb(56, 42, 35);
   --secondary1: rgb(244, 241, 234);
-  --secondary2: rgb(244, 241, 234);
-  --secondary3: rgb(244, 241, 234);
+  --secondary2: rgb(244, 241, 234 / 0.7);
+  --secondary3: rgb(244, 241, 234 / 0.3);
   --accent: rgb(229, 160, 173);
 }
 
@@ -68,20 +68,6 @@ h1, h2, h3, h4, p, span {
   @apply font-sans text-secondary1;
 }
 
-.sweIndex {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  height: 100%;
-}
-
-.sideBarLink {
-  color: #432B0E;
-  font-size: 18px;
-  line-height: 130%; /* 31.2px */
-  text-decoration-line: underline;
-  width: 100%;
-}
-
 #left {
   position: sticky;
   top: 0px;
@@ -103,15 +89,22 @@ h1, h2, h3, h4, p, span {
   padding: 40px;
 }
 
+.sweIndex {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 100%;
+}
+
+.sideBarLink {
+  @apply text-secondary1 text-[18px] border-b-[1px] border-secondary2 pt-1;
+  line-height: 130%; /* 31.2px */
+  width: 100%;
+}
+
+
+
 #header {
-  display: flex;
   height: calc(100vh - 40px);
-  padding-bottom: 40px;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 4px;
-  align-self: stretch;
 }
 
 .headerText {
@@ -129,11 +122,11 @@ h1, h2, h3, h4, p, span {
 }
 
 .h1Header2 {
-  font-family: "Meno Banner Condensed";
+  @apply font-serif;
   font-style: italic;
 }
 
-#education, #skills {
+#education, #skills, #projects {
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -144,12 +137,12 @@ h1, h2, h3, h4, p, span {
 }
 
 div.sectionHeader {
-  border-bottom: 1px solid #432B0E;
-  width: 100%
+  @apply border-solid border-b-secondary1 border-b-[1px];
+  width: 100%;
 }
 
 h2.sectionHeader {
-  @apply text-primary font-serif;
+  @apply text-secondary1 font-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -158,7 +151,7 @@ h2.sectionHeader {
 }
 
 .sectionSubheader {
-  @apply text-primary font-serif;
+  @apply text-secondary1 font-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 500;
@@ -186,13 +179,6 @@ h2.sectionHeader {
   gap: 10px;
 }
 
-.two5050Columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  align-self: stretch;
-}
-
 .educationComputerScienceColumn {
   display: flex;
   flex-direction: column;
@@ -218,11 +204,10 @@ h2.sectionHeader {
 }
 
 .tableHeader {
-  @apply text-secondary1;
+  @apply text-secondary1 border-y-[1] border-secondary3;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(67, 43, 14, 1);
   width: 100%;
 }
 
@@ -236,7 +221,7 @@ div.table {
 }
 
 p.table, span.table {
-  border-bottom: 1px solid rgba(67, 43, 14, 0.30);
+  @apply border-b-[1px] border-solid border-secondary3;
   width: 100%;
 }
 

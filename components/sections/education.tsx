@@ -15,7 +15,7 @@ export default function Education() {
 
                 <div className="coursework">
                     <h3 className="sectionSubheader">Coursework</h3>
-                    <div className="two5050Columns">
+                    <div className="flex items-start self-stretch gap-y-20 gap-x-4">
                         <div className="educationComputerScienceColumn">
                             <p className="tableHeader">Computer Science</p>
                             {[

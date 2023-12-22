@@ -21,9 +21,9 @@ const ThemeChanger = () => {
     <div className="p-8 flex justify-between items-center font-bold text-xl bg-th-background-secondary text-th-primary-dark">
         <button onClick={() => setTheme("beige")}>Beige</button>
         <button onClick={() => setTheme("brown")}>Brown</button>
-        <button onClick={() => setTheme("Beige")}>Beige</button>
-        <button onClick={() => setTheme("Beige")}>Beige</button>
-        <button onClick={() => setTheme("Beige")}>Beige</button>
+        <button onClick={() => setTheme("navy")}>Navy</button>
+        <button onClick={() => setTheme("white")}>White</button>
+        <button onClick={() => setTheme("lightgreen")}>Light Green</button>
     </div>
   );
 };

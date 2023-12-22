@@ -296,7 +296,9 @@ p.table, span.table {
   .sweIndex {
     @apply flex flex-col;
   }
+}
 
+@media only screen and (max-width: 640px) {
   .sideBarLink {
     @apply px-[40px] pt-[30px] text-[40px];
   }

@@ -9,6 +9,8 @@ import {
 import { IconContext } from "react-icons";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
+import { TextScramble } from '../../styles/TextScramble'
+import { useEffect, useState } from "react";
 
 const options = {
     duration: 500,
@@ -16,6 +18,13 @@ const options = {
 };
 
 export default function footer() {
+    useEffect(() => {
+        const scrambleElements = document.querySelectorAll('.textScramble');
+        scrambleElements.forEach((element) => {
+          new TextScramble(element);
+        });
+      }, []); // Run only once on component mount
+
     return (
         <div className="w-[100%] h-[100%] px-[40px] py-[54px] bg-accent-500 flex-col justify-start items-left gap-[39px] inline-flex sticky z-[0] bottom-0 left-0">
             <div className="scrollToTop">
@@ -46,12 +55,14 @@ export default function footer() {
                         smooth={true}
                         offset={0}
                         duration={400}
-                        className="text-primary">
-                        <sup></sup>  {name}
+                        className="text-primary underline hover:font-serif hover:cursor-pointer transition-all ease-in-out duration:200 textScramble"
+                        data-text-scramble={name}
+                    >
+                        <sup></sup> {name}
                     </ScrollLink>
                 ))}
             </div>
-            <div className="flex flex-row justify-between items-start inline-flex">
+            <div className="flex flex-row justify-between items-start">
                 <div>
                     <p className="text-primary text-[16px]">© Rei Kong 2023</p>
                 </div>

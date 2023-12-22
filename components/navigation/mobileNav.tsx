@@ -22,7 +22,7 @@ export default function MobileMenu() {
         } else {
             setOpen('Menu');
             setVisible('hidden');
-            setHeight('0vh');
+            setHeight('h-0vh');
             setNoScroll(false);
         }
     };
@@ -44,7 +44,7 @@ export default function MobileMenu() {
                 </h2>
             </div>
             
-            <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh] animate-fall`}>
+            <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh] hover:screenMinus54 transition-height duration-300 ease-in-out`}>
                 <ScrollLink
                     to="about"
                     spy={true}
@@ -93,6 +93,7 @@ export default function MobileMenu() {
                 <div className="px-[40px]">
                     <ThemeChanger />
                 </div>
+                <span className="fixed bottom-[40px] left-[40px] font-serif text-accent-500 text-[80px] tracking-tighter leading-[0.8em]">R<span className="font-serif text-accent-500 italic tracking-tighter">e</span>i K<span className="font-serif text-accent-500 italic tracking-tighter">o</span>ng</span>
             </div>
         </div>
     )

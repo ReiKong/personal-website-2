@@ -16,7 +16,9 @@ export default function RootLayout({
 
   return (
     <html suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/bfo0ccc.css"/>
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>

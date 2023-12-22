@@ -1,3 +1,10 @@
+import { animateScroll } from "react-scroll"
+
+const options = {
+    duration: 500,
+    smooth: true,
+};
+
 export default function footer() {
     return (
         <div className="w-[100%] h-[100%] px-2.5 py-[54px] bg-accent flex-col justify-start items-center gap-[39px] inline-flex">

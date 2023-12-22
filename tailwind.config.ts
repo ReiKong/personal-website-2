@@ -17,7 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         'sans': ["Acumin Pro", "sans-serif"],
-        'serif': ["Meno Banner Condensed", "serif"],
+        'serif': ["Meno Banner Extra Condensed", "serif"],
         'body': ["Acumin Pro", "sans-serif"],
       },
     },

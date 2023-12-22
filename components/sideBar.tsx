@@ -9,7 +9,7 @@ import ThemeChanger from "../components/Theme";
 export default function SideBar() {
     return(
         <div id="left">
-            <span className="font-serif text-accent text-[54px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif text-accent italic">o</span>ng</span>
+            <span className="font-serif text-accent text-[72px]">R<span className="font-serif text-accent italic">e</span>i K<span className="font-serif text-accent italic">o</span>ng</span>
             <ScrollLink
                 to="about"
                 spy={true}

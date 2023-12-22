@@ -6,7 +6,7 @@ export default function Education() {
             </div>
 
             <div className="sectionContent">
-                <div className="mcgillUniversity">
+                <div>
                     <h3 className="sectionSubheader">McGill University</h3>
                     <p className="500">Bachelor of Arts in Computer Science & Sociology, Minor in Cognitive Science</p>
                     <p>August 2022 – May 2026</p>
@@ -35,7 +35,7 @@ export default function Education() {
                             ))}
                         </div>
                         <div className="educationArtsColumn">
-                            <div className="educationSociologySection">
+                            <div className="flex flex-col items-start w-full gap-y-[4px]">
                                 <p className="tableHeader">Sociology</p>
                                 {[
                                     ['SOCI 210: Sociological Perspectives'],
@@ -46,7 +46,7 @@ export default function Education() {
                                     <p className="table">{title}</p>
                                 ))}
                             </div>
-                            <div className="educationCognitiveScienceSection">
+                            <div className="flex flex-col items-start w-full gap-y-[4px]">
                                 <p className="tableHeader">Cognitive Science</p>
                                 {[
                                     ['PSYC 212: Perception'],
@@ -58,7 +58,7 @@ export default function Education() {
                     </div>
                 </div>
 
-                <div className="activities">
+                <div className="coursework">
                     <h3 className="sectionSubheader">Activities</h3>
                     <div className="table">
                         {[

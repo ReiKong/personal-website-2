@@ -24,7 +24,7 @@ const ThemeChanger = () => {
       ].map(([color, theme]) => (
           <IconContext.Provider value={{ size: "22px" }}>
               <div>
-                <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer`} onClick={() => setTheme(theme)}/>
+                <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer hover:border-accent-500 transition duration-200`} onClick={() => setTheme(theme)}/>
               </div>
           </IconContext.Provider>
       ))}

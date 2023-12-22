@@ -23,6 +23,9 @@ const config: Config = {
         'serif': ["Meno Banner Extra Condensed", "serif"],
         'body': ["Acumin Pro", "sans-serif"],
       },
+      transitionProperty: {
+        'height': 'height',
+      },
     },
   },
   plugins: [

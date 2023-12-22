@@ -25,7 +25,7 @@ export default function footer() {
                 <div className="text-primary/60 text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
                 <div className="text-primary text-[64px] font-semibold font-serif leading-[1em]">reiskongs[at]gmail.com</div>
             </div>
-            <div className="text-primary text-xl font-medium font-sans">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
+            <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             <div className="justify-center items-start gap-2.5 inline-flex">
                 <a
                     className="text-primary"
@@ -66,7 +66,7 @@ export default function footer() {
                 </Link>
             </div>
             <div>
-                <p>© Rei Kong 2023</p>
+                <p className="text-primary text-[16px]">© Rei Kong 2023</p>
             </div>
         </div>
     )

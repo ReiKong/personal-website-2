@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://use.typekit.net/bfo0ccc.css");
-
 :root {
   --primary: 244 241 234;
   --secondary1: 67 43 14;
@@ -58,6 +56,62 @@
   --secondary2: 55 70 48;
   --secondary3: 55 70 48;
   --accent: 255 255 255;
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/AcuminPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/AcuminPro-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/AcuminPro-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Acumin Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../public/fonts/AcuminPro-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Meno Banner Extra Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/MenoBannerExtraCondensed-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Meno Banner Extra Condensed';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/MenoBannerExtraCondensed-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Meno Banner Extra Condensed';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/MenoBannerExtraCondensed-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Meno Banner Extra Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../public/fonts/MenoBannerExtraCondensed-Italic.otf") format("opentype");
 }
 
 html, body {

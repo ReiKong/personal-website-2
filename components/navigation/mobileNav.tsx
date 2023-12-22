@@ -9,7 +9,7 @@ import ThemeChanger from "../../components/Theme";
 export default function MobileMenu() {
     const [open, setOpen] = useState('Menu');
     const [visible, setVisible] = useState('hidden');
-    const [height, setHeight] = useState('0%');
+    const [height, setHeight] = useState('0vh');
     const [noScroll, setNoScroll] = useState(false);
 
     const changeText = () => {
@@ -43,7 +43,7 @@ export default function MobileMenu() {
                 </h2>
             </div>
             
-            <div className={`h-[100vh] border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0px] transition-[height] duration-300 ease-out`}>
+            <div className={`border-b-[0px] h-[${height}] ${visible} sm:hidden sm:h-[0px] transition-[height] duration-300 ease-out`}>
                 <ScrollLink
                     to="about"
                     spy={true}

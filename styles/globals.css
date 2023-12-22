@@ -129,18 +129,18 @@ h1, h2, h3, h4, p, span {
 }
 
 #left {
-  @apply sticky top-0 p-10 flex flex-col items-start self-stretch h-screen;
+  @apply sticky top-0 p-10 flex flex-col items-start self-stretch h-[100vh];
   gap: 30px;
 }
 
 #right {
-  @apply top-0 bottom-0 right-0 overflow-auto p-10;
+  @apply top-0 bottom-0 right-0 p-10 relative min-h-[100vh];
 }
 
 .sweIndex {
+  @apply z-[1] bg-primary;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  height: 100%;
 }
 
 .sideBarLink {

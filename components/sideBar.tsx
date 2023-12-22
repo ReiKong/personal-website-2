@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { BsCircleFill } from "react-icons/bs";
 import ThemeChanger from "../components/Theme";
@@ -15,8 +14,8 @@ export default function SideBar() {
                     to="about"
                     spy={true}
                     smooth={true}
-                    offset={-5}
-                    duration={700}
+                    offset={0}
+                    duration={400}
                     className="sideBarLink">
                     <sup>01</sup>  About
                 </ScrollLink>
@@ -24,8 +23,8 @@ export default function SideBar() {
                     to="experience"
                     spy={true}
                     smooth={true}
-                    offset={-5}
-                    duration={700}
+                    offset={0}
+                    duration={400}
                     className="sideBarLink">
                     <sup>02</sup>  Experience
                 </ScrollLink>
@@ -33,8 +32,8 @@ export default function SideBar() {
                     to="education"
                     spy={true}
                     smooth={true}
-                    offset={-5}
-                    duration={700}
+                    offset={0}
+                    duration={400}
                     className="sideBarLink">
                     <sup>03</sup>  Education
                 </ScrollLink>
@@ -42,8 +41,8 @@ export default function SideBar() {
                     to="skills"
                     spy={true}
                     smooth={true}
-                    offset={-5}
-                    duration={700}
+                    offset={0}
+                    duration={400}
                     className="sideBarLink">
                     <sup>04</sup>  Skills
                 </ScrollLink>
@@ -51,8 +50,8 @@ export default function SideBar() {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-5}
-                    duration={700}
+                    offset={0}
+                    duration={400}
                     className="sideBarLink">
                     <sup>05</sup>  Projects
                 </ScrollLink>

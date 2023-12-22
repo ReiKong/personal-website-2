@@ -121,7 +121,7 @@
 }
 
 html, body {
-  @apply bg-primary transition duration-200;
+  @apply bg-primary transition duration-200 scroll-smooth;
 }
 
 h1, h2, h3, h4, p, span {
@@ -219,11 +219,6 @@ h2.sectionHeader {
   align-items: flex-start;
   width: 100%;
   gap: 10px;
-}
-
-.educationComputerScienceColumn {
-  @apply flex flex-col items-start gap-y-[4px];
-  flex: 1 0 0;
 }
 
 .educationArtsColumn {

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { IconContext } from "react-icons";
 import { BsCircleFill } from "react-icons/bs";
 
 const ThemeChanger = () => {
@@ -22,11 +21,9 @@ const ThemeChanger = () => {
           ['text-[#FFFFFF]', 'white'],
           ['text-[#D0D8CC]', 'lightgreen'],
       ].map(([color, theme]) => (
-          <IconContext.Provider value={{ size: "22px" }}>
-              <div>
-                <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer hover:border-accent-500 transition duration-200`} onClick={() => setTheme(theme)}/>
-              </div>
-          </IconContext.Provider>
+        <div class="pt-[20px] text-[30px] sm:text-[22px]">
+          <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer hover:border-accent-500 transition duration-200`} onClick={() => setTheme(theme)}/>
+        </div>
       ))}
     </div>
   );

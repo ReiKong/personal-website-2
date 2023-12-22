@@ -15,8 +15,8 @@ export default function Education() {
 
                 <div className="coursework">
                     <h3 className="sectionSubheader">Coursework</h3>
-                    <div className="flex items-start self-stretch gap-y-20 gap-x-4">
-                        <div className="educationComputerScienceColumn">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] gap-x-4 w-[100%]">
+                        <div className="flex flex-col items-start gap-y-[4px] w-[100%]">
                             <p className="tableHeader">Computer Science</p>
                             {[
                                 ['COMP 202: Foundations of Programming'],
@@ -34,7 +34,7 @@ export default function Education() {
                                 <p className="table">{title}</p>
                             ))}
                         </div>
-                        <div className="educationArtsColumn">
+                        <div className="flex flex-col items-start gap-y-[20px] w-[100%]">
                             <div className="flex flex-col items-start w-full gap-y-[4px]">
                                 <p className="tableHeader">Sociology</p>
                                 {[

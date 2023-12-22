@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
     return (
         <div id="header" className="flex pb-10 flex-col justify-end items-start self-stretch gap-y-[20px]">
-                <button className="text-primary uppercase bg-accent color-primary px-3 pt-[9px] pb-[7px] rounded-[8px]">
+                <button className="text-primary uppercase bg-accent-500 px-3 pt-[9px] pb-[7px] rounded-[8px] hover:bg-accent-600 transition duration-200">
                     <Link href="/rei_kong_resume.pdf" target="_blank" rel="noreferrer noopener">
                         View Resume  →
                     </Link>

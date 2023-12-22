@@ -1,3 +1,4 @@
+node_modules/*
 node_modules/.DS_Store
 node_modules/.package-lock.json
 node_modules/.bin/acorn
@@ -24033,3 +24034,4 @@ node_modules/lodash.isplainobject/README.md
 .next/static/webpack/app/layout.cb47e7caae0243da.hot-update.js
 .next/static/webpack/app/layout.db3c3eb10829be40.hot-update.js
 .next/cache/webpack/client-development/12.pack.gz
+.next/*

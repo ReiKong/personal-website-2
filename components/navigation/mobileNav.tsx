@@ -16,7 +16,7 @@ export default function MobileMenu() {
         if (open == 'Menu') {
             setOpen('Close');
             setVisible('flex flex-col');
-            setHeight('100vh');
+            setHeight('calc(100vh_-_54px)');
             setNoScroll(true);
         } else {
             setOpen('Menu');
@@ -33,8 +33,8 @@ export default function MobileMenu() {
       }, [noScroll]);
 
     return (
-        <div className="w-[100%] h-[100%] top-0 sticky z-[2] pt-[4px] bg-primary flex flex-col sm:hidden">
-            <div className="border-b-[1px] border-b-secondary1 px-[40px]">
+        <div className="w-[100%] h-[100%] top-0 sticky z-[3] pt-[4px] bg-primary flex flex-col sm:hidden">
+            <div className="border-b-[1px] border-b-secondary1 px-[40px] h-[50px]">
                 <h2
                     className="text-secondary1 font-serif uppercase tracking-tighter text-[30px] hover:text-accent-500 transition duration-200 hover:cursor-pointer"
                     onClick={changeText}

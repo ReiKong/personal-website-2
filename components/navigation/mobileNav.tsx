@@ -44,7 +44,7 @@ export default function MobileMenu() {
                 </h2>
             </div>
             
-            <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh]`}>
+            <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh] animate-fall`}>
                 <ScrollLink
                     to="about"
                     spy={true}

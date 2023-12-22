@@ -31,45 +31,7 @@ export default function footer() {
                     reiskongs[at]gmail.com</a>
             </div>
             <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
-            <div className="justify-center items-start gap-2.5 inline-flex">
-                <a
-                    className="text-primary"
-                    href="https://github.com/ReiKong"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >
-                    <IconContext.Provider value={{ size: "22px" }}>
-                        <div>
-                            <BsGithub />
-                        </div>
-                    </IconContext.Provider>
-                </a>
-
-                <a
-                    className="text-primary"
-                    href="https:///www.linkedin.com/in/rei-kong/"
-                    target="_blank"
-                    rel="noreferrer noopener"
-                >
-                    <IconContext.Provider value={{ size: "22px" }}>
-                        <div>
-                            <BsLinkedin />
-                        </div>
-                    </IconContext.Provider>
-                </a>
-
-                <Link
-                    className="text-primary"
-                    href="/rei_kong_resume.pdf"
-                    target="_blank"
-                    rel="noreferrer noopener">
-                    <IconContext.Provider value={{ size: "22px" }}>
-                        <div>
-                            <BsFileEarmarkFill />
-                        </div>
-                    </IconContext.Provider>
-                </Link>
-            </div>
+            
             <div className="flex flex-col">
                 {[
                     ['about', '01', 'About'],
@@ -89,9 +51,45 @@ export default function footer() {
                     </ScrollLink>
                 ))}
             </div>
-            <div>
-                <p className="text-primary text-[16px]">© Rei Kong 2023</p>
+            <div className="flex flex-row justify-between items-start inline-flex">
+                <div>
+                    <p className="text-primary text-[16px]">© Rei Kong 2023</p>
+                </div>
+                <div className="justify-center items-start gap-2.5 inline-flex">
+                    <a
+                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
+                        href="https://github.com/ReiKong"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <div>
+                            <BsGithub />
+                        </div>
+                    </a>
+
+                    <a
+                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
+                        href="https:///www.linkedin.com/in/rei-kong/"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <div>
+                            <BsLinkedin />
+                        </div>
+                    </a>
+
+                    <Link
+                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
+                        href="/rei_kong_resume.pdf"
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <div>
+                            <BsFileEarmarkFill />
+                        </div>
+                    </Link>
+                </div>
             </div>
+            
         </div>
     )
 }

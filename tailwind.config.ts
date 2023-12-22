@@ -28,7 +28,7 @@ const config: Config = {
       },
       animation: {
         rise: 'rise 1.3s ease',
-        growDown: 'growDown 300ms ease-in-out forwards'
+        fall: 'fall 0.5s ease-in-out forwards'
         }
       },
       keyframes: {
@@ -36,9 +36,9 @@ const config: Config = {
           '0%': { transform: 'translate(0%,150%) skewX(0deg)' },
           '100%': { transform: 'translate(0%,0%) skewX(0deg)' },
         },
-        growDown: {
-          '0%': { transform: 'scaleY(0)' },
-          '100%': { transform: 'scaleY(1)' },
+        fall: {
+          '0%': { transform: 'translate(0%,-150%) skewX(0deg) scaleY(0)' },
+          '100%': { transform: 'translate(0%,0%) skewX(0deg) scaleY(1)' },
         }
       },
     },

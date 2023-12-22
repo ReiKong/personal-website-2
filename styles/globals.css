@@ -143,6 +143,14 @@ h1, h2, h3, h4, p, span {
   grid-template-columns: 1fr 3fr;
 }
 
+::-moz-selection {
+  @apply text-primary bg-accent-500;
+}
+
+::selection {
+  @apply text-primary bg-accent-500;
+}
+
 .sideBarLink {
   @apply text-secondary1 text-[18px] border-b-[1px] border-secondary2 pt-1 transition-colors hover:text-accent-500 hover:cursor-pointer hover:border-b-accent-500;
   line-height: 130%; /* 31.2px */
@@ -249,6 +257,11 @@ div.table {
 p.table, span.table {
   @apply normal-case border-b-[1px] border-solid border-secondary3 transition duration-200;
   width: 100%;
+}
+
+.scrollToTop {
+  @apply fixed top-[16px] right-[16px] flex;
+  writing-mode: vertical-ltr;
 }
 
 @media only screen and (max-width: 600px) {

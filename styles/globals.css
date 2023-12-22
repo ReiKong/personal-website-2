@@ -130,7 +130,7 @@ h1, h2, h3, h4, p, span {
 
 #left {
   @apply sticky top-0 p-10 flex flex-col items-start self-stretch h-screen;
-  gap: 4px;
+  gap: 30px;
 }
 
 #right {
@@ -186,7 +186,7 @@ div.sectionHeader {
 }
 
 h2.sectionHeader {
-  @apply text-secondary1 font-serif transition duration-200;
+  @apply text-secondary1 font-serif transition duration-200 text-wrap;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -255,23 +255,6 @@ p.table, span.table {
   @apply normal-case border-b-[1px] border-solid border-secondary3 transition duration-200;
   width: 100%;
 }
-
-.three333333Columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  align-self: stretch;
-}
-
-.child33Column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  flex: 1 0 0;
-}
-
-
 
 @media only screen and (max-width: 600px) {
   #left {

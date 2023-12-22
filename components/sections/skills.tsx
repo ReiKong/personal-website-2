@@ -4,19 +4,10 @@ export default function Skills() {
             <div className="sectionHeader">
                 <h2 className="sectionHeader">Skills</h2>
             </div>
-            <div className="three333333Columns">
-                <div className="child33Column">
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] w-[100%] gap-y-8">
+                <div className="flex flex-1 flex-col items-start gap-y-[4px]">
                     <h3 className="sectionSubheader">Programming Languages</h3>
-                </div>
-                <div className="child33Column">
-                    <h3 className="sectionSubheader">Tools & Technologies</h3>
-                </div>
-                <div className="child33Column">
-                    <h3 className="sectionSubheader">Other</h3>
-                </div>
-            </div>
-            <div className="three333333Columns">
-                <div className="child33Column">
                     {[
                         ['Java'],
                         ['Python'],
@@ -30,7 +21,8 @@ export default function Skills() {
                         <p className="table">{skill}</p>
                     ))}
                 </div>
-                <div className="child33Column">
+                <div className="flex flex-1 flex-col items-start gap-y-[4px]">
+                    <h3 className="sectionSubheader">Tools & Technologies</h3>
                     {[
                         ['Git'],
                         ['React.js'],
@@ -41,7 +33,8 @@ export default function Skills() {
                         <p className="table">{skill}</p>
                     ))}
                 </div>
-                <div className="child33Column">
+                <div className="flex flex-1 flex-col items-start gap-y-[4px]">
+                    <h3 className="sectionSubheader">Other</h3>
                     {[
                         ['Figma'],
                         ['Adobe XD'],

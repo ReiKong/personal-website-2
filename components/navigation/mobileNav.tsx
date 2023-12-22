@@ -33,7 +33,7 @@ export default function MobileMenu() {
       }, [noScroll]);
 
     return (
-        <div className="w-[100%] h-[100%] top-0 z-[2] sticky pt-[4px] bg-primary flex flex-col sm:hidden">
+        <div className="w-[100%] h-[100vh] top-0 z-[2] sticky pt-[4px] bg-primary flex flex-col sm:hidden">
             <div className="border-b-[1px] border-b-secondary1 px-[40px]">
                 <h2
                     className="text-secondary1 font-serif uppercase tracking-tighter text-[30px] hover:text-accent-500 transition duration-200 hover:cursor-pointer"

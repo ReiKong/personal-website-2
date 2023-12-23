@@ -6,7 +6,6 @@ import {
     BsGithub,
     BsFileEarmarkFill,
 } from "react-icons/bs";
-import { IconContext } from "react-icons";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { TextScramble } from '../../styles/TextScramble'
@@ -32,12 +31,15 @@ export default function footer() {
                 <p className="rotate-90">Scroll to top</p>
             </div>
             <div className="flex-cols gap-y-4">
-                <div className="text-primary/60 text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
+                <div className="text-primary/60 text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
                 <a 
-                    className="text-primary text-[64px] font-semibold font-serif leading-[1em] hover:bg-primary hover:text-secondary1"
+                    className=""
                     href="mailto:reiskongs@gmail.com"
                 >
-                    reiskongs[at]gmail.com</a>
+                    <span className="text-primary text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em] shadow-[inset_0px_-4px_0px_0px] shadow-primary hover:shadow-[inset_0px_-70px_0px_0px] hover:shadow-primary duration-300 hover:text-secondary1">
+                        reiskongs[at]gmail.com
+                    </span>
+                </a>
             </div>
             <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             
@@ -66,36 +68,28 @@ export default function footer() {
                 <div>
                     <p className="text-primary text-[16px]">© Rei Kong 2023</p>
                 </div>
-                <div className="justify-center items-start gap-2.5 inline-flex">
-                    <a
-                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
-                        href="https://github.com/ReiKong"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >
-                        <div>
-                            <BsGithub />
-                        </div>
-                    </a>
-
-                    <a
-                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
-                        href="https:///www.linkedin.com/in/rei-kong/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >
-                        <div>
-                            <BsLinkedin />
-                        </div>
-                    </a>
+                <div className="justify-center items-start gap-x-[20px] inline-flex">
+                    {[
+                        ['https://github.com/ReiKong', 'GitHub'],
+                        ['https:///www.linkedin.com/in/rei-kong/', 'LinkedIn'],
+                    ].map(([link, display]) => (
+                        <a
+                            className="text-primary text-[16px] transition-colors duration-300 hover:font-serif"
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <span className="underline text-primary text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> ↗
+                        </a>
+                    ))}
 
                     <Link
-                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300"
+                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300 hover:font-serif"
                         href="/rei_kong_resume.pdf"
                         target="_blank"
                         rel="noreferrer noopener">
-                        <div>
-                            <BsFileEarmarkFill />
+                        <div className="flex flex-row">
+                            Resumé ↗
                         </div>
                     </Link>
                 </div>

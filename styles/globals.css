@@ -129,12 +129,7 @@ h1, h2, h3, h4, p, span {
 }
 
 #left {
-  @apply sticky top-0 p-10 flex flex-col items-start self-stretch h-[100vh];
   gap: 30px;
-}
-
-#right {
-  @apply top-0 bottom-0 right-0 p-10 relative min-h-[100vh];
 }
 
 .sweIndex {
@@ -184,7 +179,7 @@ h1, h2, h3, h4, p, span {
 }
 
 .h1Header {
-  @apply text-secondary1 text-[54px] tracking-[-0.07em] transition duration-200;
+  @apply text-secondary1 text-[48px] sm:text-[54px] tracking-[-0.07em] transition duration-200;
   font-style: normal;
   font-weight: 500;
   line-height: 105%; /* 75.6px */
@@ -278,7 +273,7 @@ p.table, span.table {
 }
 
 .scrollToTop {
-  @apply fixed top-[16px] right-[16px] flex;
+  @apply fixed top-[16px] right-[16px] hidden;
   writing-mode: vertical-ltr;
 }
 
@@ -289,10 +284,6 @@ p.table, span.table {
 }
 
 @media only screen and (max-width: 600px) {
-  #left {
-    display: none;
-  }
-
   .sweIndex {
     @apply flex flex-col;
   }

@@ -94,7 +94,7 @@ export default function MobileMenu() {
                     <ThemeChanger />
                 </div>
                 <div className="fixed bottom-[40px] left-[40px]">
-                    <span className="font-serif text-accent-500 text-[80px] tracking-tighter leading-[0.8em]">R<span className="font-serif text-accent-500 italic tracking-tighter">e</span>i K<span className="font-serif text-accent-500 italic tracking-tighter">o</span>ng</span>
+                    <span className="font-serif text-accent-500 text-[60px] tracking-tighter leading-[0.8em]">R<span className="font-serif text-accent-500 italic tracking-tighter">e</span>i K<span className="font-serif text-accent-500 italic tracking-tighter">o</span>ng</span>
                     
                 </div>
                 

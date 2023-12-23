@@ -7,7 +7,7 @@ import ThemeChanger from "../components/Theme";
 
 export default function SideBar() {
     return(
-        <div id="left" className="hidden sm:sticky sm:top-0 sm:p-10 sm:flex sm:flex-col sm:items-start sm:self-stretch sm:h-[100vh]">
+        <div id="left" className="hidden sm:sticky sm:top-0 sm:p-10 sm:flex sm:flex-col sm:items-start sm:self-stretch sm:h-[100vh] border-b-[1px] border-b-secondary1">
             <span className="font-serif text-accent-500 text-[80px] tracking-tighter leading-[0.8em]">R<span className="font-serif text-accent-500 italic tracking-tighter">e</span>i K<span className="font-serif text-accent-500 italic tracking-tighter">o</span>ng</span>
             <div className="flex flex-col gap-y-[10px] w-[100%]">
                 <ScrollLink

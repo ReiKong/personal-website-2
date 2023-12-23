@@ -1,8 +1,10 @@
-
+import classwise from "../public/images/classwiseCover.png";
+import recipez from "../public/images/recipezCover.png";
+import mcgilleats from "../public/images/mcgilleatsCover.png";
 
 export const projects = [
     {
-        imageSrc: "classwise",
+        imageSrc: classwise,
         title: "ClassWise",
         projectLink: "#",
         githubLink: "#",
@@ -10,7 +12,7 @@ export const projects = [
         techStack: "React.js",
     },
     {
-        imageSrc: "recipez",
+        imageSrc: recipez,
         title: "RecipeZ",
         projectLink: "#",
         githubLink: "#",
@@ -18,7 +20,7 @@ export const projects = [
         techStack: "React.js",
     },
     {
-        imageSrc: "mcgilleats",
+        imageSrc: mcgilleats,
         title: "McGill Eats",
         projectLink: "#",
         githubLink: "#",

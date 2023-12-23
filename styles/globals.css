@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* THEMES */
 :root {
   --primary: 244 241 234;
   --secondary1: 67 43 14;
@@ -47,10 +48,10 @@
 }
 
 [data-theme='white'] {
-  --primary: 255 255 255;
-  --secondary1: 0 0 0;
-  --secondary2: 0 0 0;
-  --secondary3: 0 0 0 ;
+  --primary: 250 248 248;
+  --secondary1: 41 9 4;
+  --secondary2: 41 9 4;
+  --secondary3: 41 9 4;
   --accent500: 230 0 0;
   --accent600: 209 11 11;
 }
@@ -64,6 +65,7 @@
   --accent600: 192 70 58;
 }
 
+/* FONT IMPORTS */
 @font-face {
   font-family: 'Acumin Pro';
   font-style: normal;
@@ -120,6 +122,7 @@
   src: url("../public/fonts/MenoBannerExtraCondensed-Italic.otf") format("opentype");
 }
 
+/* GENERAL STYLES */
 html, body {
   @apply bg-primary transition duration-200 scroll-smooth;
 }
@@ -156,7 +159,7 @@ h1, h2, h3, h4, p, span {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-accent-500;
+  @apply bg-secondary1;
 }
 
 /* Handle on hover */

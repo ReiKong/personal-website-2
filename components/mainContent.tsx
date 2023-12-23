@@ -5,7 +5,7 @@ import Projects from './sections/projects'
 
 export default function mainContent() {
     return (
-        <div className="top-0 bottom-0 right-0 p-10 relative min-h-[100vh]">
+        <div className="top-0 bottom-0 right-0 p-10 relative min-h-[100vh] border-b-[1px] border-b-secondary1">
             <Header />
             <Education />
             <Skills />

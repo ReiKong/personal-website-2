@@ -73,9 +73,9 @@ export class TextScramble {
       });
     }
   }
-  
+  /*
   // Init TextScramble
   const scrambleElements = document.querySelectorAll('.textScramble');
   scrambleElements.forEach((element) => {
     new TextScramble(element);
-  });
+  });*/

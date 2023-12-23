@@ -49,9 +49,9 @@
 
 [data-theme='white'] {
   --primary: 250 248 248;
-  --secondary1: 41 9 4;
-  --secondary2: 41 9 4;
-  --secondary3: 41 9 4;
+  --secondary1: 242 247 252;
+  --secondary2: 242 247 252;
+  --secondary3: 242 247 252;
   --accent500: 230 0 0;
   --accent600: 209 11 11;
 }
@@ -276,8 +276,9 @@ p.table, span.table {
 }
 
 .scrollToTop {
-  @apply fixed top-[16px] right-[16px] hidden;
-  writing-mode: vertical-ltr;
+  @apply top-[16px] right-[16px] text-primary flex flex-row gap-x-3;
+  writing-mode: vertical-lr;
+  align-items: center;
 }
 
 @layer utilities {

@@ -10,6 +10,8 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import { TextScramble } from '../../styles/TextScramble'
 import { useEffect, useState } from "react";
+import { BsArrowUp } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const options = {
     duration: 500,
@@ -26,21 +28,30 @@ export default function footer() {
 
     return (
         <div className="w-[100%] h-[100%] px-[40px] py-[54px] bg-accent-500 flex-col justify-start items-left gap-[39px] inline-flex sticky z-[0] bottom-0 left-0">
-            <div className="scrollToTop">
-                <p>↑</p>
-                <p className="rotate-90">Scroll to top</p>
+            <div className="flex flex-row justify-between">
+                <div className="flex-cols gap-y-4">
+                    <div className="text-primary/60 text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
+                    <a href="mailto:reiskongs@gmail.com">
+                        <span className="text-primary text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em] shadow-[inset_0px_-4px_0px_0px] shadow-primary hover:shadow-[inset_0px_-70px_0px_0px] hover:shadow-primary duration-300 hover:text-secondary1">
+                            reiskongs[at]gmail.com
+                        </span>
+                    </a>
+                </div>
+                <div className="scrollToTop">
+                    <BsArrowUp />
+                    <ScrollLink
+                        to="header"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={400}
+                        className="cursor-pointer"
+                    >
+                        Scroll to top
+                    </ScrollLink>
+                </div>
             </div>
-            <div className="flex-cols gap-y-4">
-                <div className="text-primary/60 text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em]">Thanks for visting—let's get in touch!</div>
-                <a 
-                    className=""
-                    href="mailto:reiskongs@gmail.com"
-                >
-                    <span className="text-primary text-[30px] sm:text-[64px] font-semibold font-serif leading-[1em] shadow-[inset_0px_-4px_0px_0px] shadow-primary hover:shadow-[inset_0px_-70px_0px_0px] hover:shadow-primary duration-300 hover:text-secondary1">
-                        reiskongs[at]gmail.com
-                    </span>
-                </a>
-            </div>
+
             <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             
             <div className="flex flex-col">
@@ -74,12 +85,12 @@ export default function footer() {
                         ['https:///www.linkedin.com/in/rei-kong/', 'LinkedIn'],
                     ].map(([link, display]) => (
                         <a
-                            className="text-primary text-[16px] transition-colors duration-300 hover:font-serif"
+                            className="text-primary text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
                             href={link}
                             target="_blank"
                             rel="noreferrer noopener"
                         >
-                            <span className="underline text-primary text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> ↗
+                            <span className="underline text-primary text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
                         </a>
                     ))}
 
@@ -89,7 +100,7 @@ export default function footer() {
                         target="_blank"
                         rel="noreferrer noopener">
                         <div className="flex flex-row">
-                            Resumé ↗
+                            <span className="underline text-primary text-[16px] hover:font-serif">Resumé</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
                         </div>
                     </Link>
                 </div>

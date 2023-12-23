@@ -17,12 +17,13 @@ export default function Header() {
                     </div>
                     <div className="overflow-hidden ">
                         <h1 className="h1Header text-secondary1 animate-rise">
-                        <span className="font-serif italic text-secondary1 inline-block">&nbsp;STUDYING&nbsp;</span>
-                            COMPUTER SCIENCE
+                            <span className="font-serif italic text-secondary1 inline-block">&nbsp;STUDYING&nbsp;</span>
+                            <a href="https://www.cs.mcgill.ca/" className="uppercase hover:text-accent-500 transition-colors duration-300">Computer Science</a>
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;&&nbsp;</span>
-                            SOCIOLOGY
+                            <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">Sociology</a>
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;@&nbsp;</span>
-                            MCGILL UNIVERSITY.</h1>
+                            MCGILL UNIVERSITY.
+                        </h1>
                     </div>
                     
                     

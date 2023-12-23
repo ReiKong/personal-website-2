@@ -95,7 +95,7 @@ export default function footer() {
                     ))}
 
                     <Link
-                        className="text-primary text-[16px] hover:text-secondary1 transition-colors duration-300 hover:font-serif"
+                        className="text-primary text-[16px] hover:primary transition-colors duration-300 hover:font-serif"
                         href="/rei_kong_resume.pdf"
                         target="_blank"
                         rel="noreferrer noopener">

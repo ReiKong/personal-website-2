@@ -194,7 +194,7 @@ h1, h2, h3, h4, p, span {
   font-style: italic;
 }
 
-#education, #skills, #projects {
+#about, #experience, #education, #skills, #projects {
   display: flex;
   padding-top: 80px;
   padding-bottom: 80px;

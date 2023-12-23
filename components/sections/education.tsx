@@ -17,7 +17,7 @@ export default function Education() {
                     <h3 className="sectionSubheader">Coursework</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] gap-x-4 w-[100%]">
                         <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
-                            <summary className="tableHeader">
+                            <summary className="tableHeader cursor-pointer">
                                 Computer Science
                             </summary>
                             <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">
@@ -41,7 +41,7 @@ export default function Education() {
 
                         <div className="flex flex-col items-start gap-y-[20px] w-[100%]">
                             <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
-                                <summary className="tableHeader">
+                                <summary className="tableHeader cursor-pointer">
                                     Sociology
                                 </summary>
                                 <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">
@@ -56,7 +56,7 @@ export default function Education() {
                                 </div>
                             </details>
                             <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
-                                <summary className="tableHeader">
+                                <summary className="tableHeader cursor-pointer">
                                 Cognitive Science
                                 </summary>
                                 <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">

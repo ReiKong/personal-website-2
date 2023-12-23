@@ -49,9 +49,9 @@
 
 [data-theme='white'] {
   --primary: 250 248 248;
-  --secondary1: 242 247 252;
-  --secondary2: 242 247 252;
-  --secondary3: 242 247 252;
+  --secondary1: 4 9 4;
+  --secondary2: 4 9 4;
+  --secondary3: 4 9 4;
   --accent500: 230 0 0;
   --accent600: 209 11 11;
 }
@@ -287,13 +287,11 @@ p.table, span.table {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .sweIndex {
     @apply flex flex-col;
   }
-}
 
-@media only screen and (max-width: 640px) {
   .sideBarLink {
     @apply px-[40px] pt-[30px] text-[40px];
   }

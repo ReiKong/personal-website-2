@@ -75,11 +75,11 @@ export default function footer() {
                     </ScrollLink>
                 ))}
             </div>
-            <div className="flex flex-row justify-between items-start">
+            <div className="flex flex-row justify-between items-end sm:items-start">
                 <div>
                     <p className="text-primary text-[16px]">© Rei Kong 2023</p>
                 </div>
-                <div className="justify-center items-start gap-x-[20px] inline-flex">
+                <div className="justify-center items-start gap-x-[20px] flex flex-col sm:flex-row">
                     {[
                         ['https://github.com/ReiKong', 'GitHub'],
                         ['https:///www.linkedin.com/in/rei-kong/', 'LinkedIn'],

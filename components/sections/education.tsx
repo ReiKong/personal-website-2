@@ -16,44 +16,57 @@ export default function Education() {
                 <div className="coursework">
                     <h3 className="sectionSubheader">Coursework</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] gap-x-4 w-[100%]">
-                        <div className="flex flex-col items-start gap-y-[4px] w-[100%]">
-                            <p className="tableHeader">Computer Science</p>
-                            {[
-                                ['COMP 202: Foundations of Programming'],
-                                ['COMP 206: Introduction to Software Systems'],
-                                ['COMP 230: Logic & Computability'],
-                                ['COMP 250: Introduction to Computer Science'],
-                                ['COMP 251: Algorithms & Data Structures'],
-                                ['COMP 273: Introduction to Computer Systems'],
-                                ['COMP 303: Software Design'],
-                                ['MATH 133: Linear Algebra'],
-                                ['MATH 140: Calculus I'],
-                                ['MATH 141: Calculus II'],
-                                ['MATH 240: Discrete Structures'],
-                            ].map(([title]) => (
-                                <p className="table">{title}</p>
-                            ))}
-                        </div>
+                        <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
+                            <summary className="tableHeader">
+                                Computer Science
+                            </summary>
+                            <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">
+                                {[
+                                    ['COMP 202: Foundations of Programming'],
+                                    ['COMP 206: Introduction to Software Systems'],
+                                    ['COMP 230: Logic & Computability'],
+                                    ['COMP 250: Introduction to Computer Science'],
+                                    ['COMP 251: Algorithms & Data Structures'],
+                                    ['COMP 273: Introduction to Computer Systems'],
+                                    ['COMP 303: Software Design'],
+                                    ['MATH 133: Linear Algebra'],
+                                    ['MATH 140: Calculus I'],
+                                    ['MATH 141: Calculus II'],
+                                    ['MATH 240: Discrete Structures'],
+                                ].map(([title]) => (
+                                    <p className="table">{title}</p>
+                                ))}
+                            </div>
+                        </details>
+
                         <div className="flex flex-col items-start gap-y-[20px] w-[100%]">
-                            <div className="flex flex-col items-start w-full gap-y-[4px]">
-                                <p className="tableHeader">Sociology</p>
-                                {[
-                                    ['SOCI 210: Sociological Perspectives'],
-                                    ['SOCI 211: Sociological Inquiry'],
-                                    ['SOCI 326: Introduction to Political Sociology'],
-                                    ['SOCI 330: Sociological Theory'],
-                                ].map(([title]) => (
-                                    <p className="table">{title}</p>
-                                ))}
-                            </div>
-                            <div className="flex flex-col items-start w-full gap-y-[4px]">
-                                <p className="tableHeader">Cognitive Science</p>
-                                {[
-                                    ['PSYC 212: Perception'],
-                                ].map(([title]) => (
-                                    <p className="table">{title}</p>
-                                ))}
-                            </div>
+                            <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
+                                <summary className="tableHeader">
+                                    Sociology
+                                </summary>
+                                <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">
+                                    {[
+                                        ['SOCI 210: Sociological Perspectives'],
+                                        ['SOCI 211: Sociological Inquiry'],
+                                        ['SOCI 326: Introduction to Political Sociology'],
+                                        ['SOCI 330: Sociological Theory'],
+                                    ].map(([title]) => (
+                                        <p className="table">{title}</p>
+                                    ))}
+                                </div>
+                            </details>
+                            <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
+                                <summary className="tableHeader">
+                                Cognitive Science
+                                </summary>
+                                <div className="flex flex-col items-start w-full gap-y-[4px] pt-[4px]">
+                                    {[
+                                        ['PSYC 212: Perception'],
+                                    ].map(([title]) => (
+                                        <p className="table">{title}</p>
+                                    ))}
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>

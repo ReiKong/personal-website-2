@@ -170,7 +170,7 @@ h1, h2, h3, h4, p, span {
 
 /* CURSOR STYLING */
 .cursorMcgill {
-  cursor: url("../public/images/mcgillCursor.png"), default;
+  cursor: url("../public/images/mcgillCursor.png"), auto;
 }
 
 /* ETC */
@@ -261,11 +261,7 @@ h2.sectionHeader {
 }
 
 .tableHeader {
-  @apply text-secondary1 border-b-[1px] border-secondary1 transition duration-200;
-  font-weight: 600;
-  font-size: 18px;
-  text-transform: uppercase;
-  width: 100%;
+  @apply text-secondary1 border-b-[1px] border-secondary1 transition duration-200 font-semibold text-lg uppercase w-full;
 }
 
 div.table {
@@ -300,6 +296,6 @@ p.table, span.table {
   }
 
   .sideBarLink {
-    @apply px-[40px] pt-[15px] pb-[5px] text-[30px];
+    @apply px-[40px] pt-[20px] pb-[10px] text-[30px];
   }
 }

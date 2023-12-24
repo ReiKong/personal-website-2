@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+
+
 export default function Header() {
     return (
         <div id="header" className="flex pb-10 flex-col justify-end items-start self-stretch gap-y-[20px]">
@@ -22,7 +24,7 @@ export default function Header() {
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;&&nbsp;</span>
                             <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">Sociology</a>
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;@&nbsp;</span>
-                            <div className="cursorMcgill">MCGILL UNIVERSITY.</div>
+                            MCGILL UNIVERSITY.
                         </h1>
                     </div>
                     

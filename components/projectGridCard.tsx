@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-export default function projectCard({
+export default function projectGridCard({
     imageSrc,
     title,
     projectLink,
@@ -21,6 +21,7 @@ export default function projectCard({
                 <Image
                     src={imageSrc}
                     className="contain"
+                    placeholder="blur"
                     alt={title} />
             </div>
             <div className="px-2.5 pt-2.5 pb-2.5 flex flex-col justify-start items-start gap-4 border-t border-t-secondary1">

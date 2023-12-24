@@ -6,7 +6,7 @@ export const projects = [
     {
         imageSrc: classwise,
         title: "ClassWise",
-        projectLink: "#",
+        projectLink: "https://classwise-97f745bcadbb.herokuapp.com/",
         githubLink: "#",
         description: "A web application for streamlined class and instructor research by students.",
         techStack: "React.js",
@@ -17,7 +17,7 @@ export const projects = [
         projectLink: "#",
         githubLink: "#",
         description: "A web application which generates recipes using user-input ingredients",
-        techStack: "React.js",
+        techStack: "React.js, JavaScript, HTML/CSS, Python, PyTorch",
     },
     {
         imageSrc: mcgilleats,

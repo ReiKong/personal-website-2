@@ -141,6 +141,7 @@ h1, h2, h3, h4, p, span {
   grid-template-columns: 1fr 3fr;
 }
 
+/* TEXT SELECTION */
 ::-moz-selection {
   @apply text-primary bg-accent-500;
 }
@@ -153,7 +154,7 @@ h1, h2, h3, h4, p, span {
   width: 10px;
 }
 
-/* Track */
+/* SCROLL BAR */
 ::-webkit-scrollbar-track {
   @apply bg-primary;
 }
@@ -162,11 +163,17 @@ h1, h2, h3, h4, p, span {
   @apply bg-secondary1;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent-600;
 }
 
+
+/* CURSOR STYLING */
+.cursorMcgill {
+  cursor: url("../public/images/mcgillCursor.png"), default;
+}
+
+/* ETC */
 .sideBarLink {
   @apply text-secondary1 text-[18px] border-b-[1px] border-secondary2 pt-1 transition-colors hover:text-accent-500 hover:cursor-pointer hover:border-b-accent-500;
   line-height: 130%; /* 31.2px */
@@ -293,6 +300,6 @@ p.table, span.table {
   }
 
   .sideBarLink {
-    @apply px-[40px] pt-[30px] text-[40px];
+    @apply px-[40px] pt-[15px] pb-[5px] text-[30px];
   }
 }

@@ -22,7 +22,7 @@ export default function Header() {
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;&&nbsp;</span>
                             <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">Sociology</a>
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;@&nbsp;</span>
-                            MCGILL UNIVERSITY.
+                            <div className="cursorMcgill">MCGILL UNIVERSITY.</div>
                         </h1>
                     </div>
                     

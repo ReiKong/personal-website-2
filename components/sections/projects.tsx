@@ -64,7 +64,7 @@ export default function Projects() {
                         {[
                             ['Project Name'],
                             ['Tech Stack'],
-                            ['GitHub Repository'],
+                            ['GitHub'],
                             ['Demo'],
                         ].map(([content]) => (
                             <p className="text-secondary1 transition duration-200 font-semibold text-lg uppercase w-full">{content}</p>

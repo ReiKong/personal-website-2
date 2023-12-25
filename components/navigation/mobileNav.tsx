@@ -50,8 +50,10 @@ export default function MobileMenu() {
                     spy={true}
                     smooth={true}
                     offset={-5}
-                    duration={700}
-                    className="sideBarLink">
+                    duration={500}
+                    className="sideBarLink"
+                    onClick={changeText}
+                >
                     <sup>01</sup>  About
                 </ScrollLink>
                 <ScrollLink
@@ -59,8 +61,10 @@ export default function MobileMenu() {
                     spy={true}
                     smooth={true}
                     offset={-5}
-                    duration={700}
-                    className="sideBarLink">
+                    duration={500}
+                    className="sideBarLink"
+                    onClick={changeText}
+                >
                     <sup>02</sup>  Experience
                 </ScrollLink>
                 <ScrollLink
@@ -68,8 +72,10 @@ export default function MobileMenu() {
                     spy={true}
                     smooth={true}
                     offset={-5}
-                    duration={700}
-                    className="sideBarLink">
+                    duration={500}
+                    className="sideBarLink"
+                    onClick={changeText}
+                >
                     <sup>03</sup>  Education
                 </ScrollLink>
                 <ScrollLink
@@ -77,8 +83,10 @@ export default function MobileMenu() {
                     spy={true}
                     smooth={true}
                     offset={-5}
-                    duration={700}
-                    className="sideBarLink">
+                    duration={500}
+                    className="sideBarLink"
+                    onClick={changeText}
+                >
                     <sup>04</sup>  Skills
                 </ScrollLink>
                 <ScrollLink
@@ -86,8 +94,10 @@ export default function MobileMenu() {
                     spy={true}
                     smooth={true}
                     offset={-5}
-                    duration={700}
-                    className="sideBarLink">
+                    duration={500}
+                    className="sideBarLink"
+                    onClick={changeText}
+                >
                     <sup>05</sup>  Projects
                 </ScrollLink>
                 <div className="px-[40px]">

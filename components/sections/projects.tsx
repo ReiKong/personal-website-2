@@ -1,7 +1,7 @@
 "use client";
 
-import ProjectListCard from "../projectListCard";
-import ProjectGridCard from "../projectGridCard";
+import ProjectListCard from "../cards/projectListCard";
+import ProjectGridCard from "../cards/projectGridCard";
 import { projects } from "../../data/projectsData";
 import { useState, useEffect } from "react";
 import { BsFillGridFill, BsFillGrid3X3GapFill, BsList } from "react-icons/bs";

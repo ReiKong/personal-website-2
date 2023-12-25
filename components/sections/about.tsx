@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div id="about">
+        <section id="about">
             <div className="sectionHeader">
                 <h2 className="sectionHeader">About</h2>
             </div>
@@ -14,6 +14,6 @@ export default function About() {
                 <span></span>
                 <span> I've been working with Python, Java, and React.js more recently, and I aim to become more proficient in frameworks like Django.</span>
             </div>
-        </div>
+        </section>
     )
 }

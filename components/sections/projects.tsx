@@ -32,7 +32,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div id="projects">
+        <section id="projects">
             <div className="w-full">
                 <div className="sectionHeader flex flex-row justify-between">
                     <h2 className="sectionHeader">Projects</h2>
@@ -75,6 +75,6 @@ export default function Projects() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

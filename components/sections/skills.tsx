@@ -1,6 +1,6 @@
 export default function Skills() {
     return (
-        <div id="skills">
+        <section id="skills">
             <div className="sectionHeader">
                 <h2 className="sectionHeader">Skills</h2>
             </div>
@@ -45,6 +45,6 @@ export default function Skills() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

@@ -33,6 +33,14 @@ export default function MobileMenu() {
         }
       }, [noScroll]);
 
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+    // Calculate the pixel value for 100vh
+    const vh = window.innerHeight * 0.01;
+    setOffset(-100 * vh);
+    }, []);
+
     return (
         <div className="w-[100%] top-0 sticky z-[3] pt-[4px] bg-primary flex flex-col sm:hidden">
             <div className="border-b-[1px] border-b-secondary1 px-[40px] h-[50px]">
@@ -49,7 +57,7 @@ export default function MobileMenu() {
                     to="about"
                     spy={true}
                     smooth={true}
-                    offset={-5}
+                    offset={offset}
                     duration={500}
                     className="sideBarLink"
                     onClick={changeText}
@@ -60,7 +68,7 @@ export default function MobileMenu() {
                     to="experience"
                     spy={true}
                     smooth={true}
-                    offset={-5}
+                    offset={offset}
                     duration={500}
                     className="sideBarLink"
                     onClick={changeText}
@@ -71,7 +79,7 @@ export default function MobileMenu() {
                     to="education"
                     spy={true}
                     smooth={true}
-                    offset={-5}
+                    offset={offset}
                     duration={500}
                     className="sideBarLink"
                     onClick={changeText}
@@ -82,7 +90,7 @@ export default function MobileMenu() {
                     to="skills"
                     spy={true}
                     smooth={true}
-                    offset={-5}
+                    offset={offset}
                     duration={500}
                     className="sideBarLink"
                     onClick={changeText}
@@ -93,7 +101,7 @@ export default function MobileMenu() {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-5}
+                    offset={offset}
                     duration={500}
                     className="sideBarLink"
                     onClick={changeText}

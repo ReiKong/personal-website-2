@@ -299,3 +299,147 @@ p.table, span.table {
     @apply px-[40px] pt-[20px] pb-[10px] text-[30px];
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-grid {
+  display: grid;
+  height: 100vh;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.w-100 {
+  width: 100vw;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.pos-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.preloader-container > div:first-child {
+  width: 30%;
+}
+
+/* 1: bar */
+
+.preloader-bar,
+.preloader-bar2 {
+  height: 5px;
+}
+
+.preloader-bar {
+  background-color: #c9c9c9;
+  width: 100%;
+}
+
+.preloader-bar2 {
+  width: 0%;
+  background-color: #0059ff;
+  transition: all 300ms;
+}
+
+/* 2: progress circle */
+
+.circle-wrap {
+  width: 150px;
+  height: 150px;
+  background: #e6e2e7;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+}
+
+.circle-wrap .circle .mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #0059ff;
+}
+
+.circle-wrap .circle .mask.full,
+.circle-wrap .circle .fill {
+  transition: all 300ms;
+}
+
+.circle-wrap .inside-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 130px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/* 3: filled circle */
+
+.filled-circle .circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #0059ff;
+  overflow: hidden;
+}
+
+.filled-circle .inner-circle {
+  width: 100%;
+  height: 100%;
+  background-color: #0059ff;
+  transition: all 300ms;
+  top: 100%;
+}
+
+.filled-circle .text {
+  font-size: 2em;
+  color: rgb(105, 218, 247);
+}

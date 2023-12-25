@@ -3,7 +3,7 @@
 import ProjectListCard from "../projectListCard";
 import ProjectGridCard from "../projectGridCard";
 import { projects } from "../../data/projectsData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsFillGridFill, BsFillGrid3X3GapFill, BsList } from "react-icons/bs";
 
 export default function Projects() {
@@ -26,6 +26,10 @@ export default function Projects() {
         setListClick('text-primary bg-secondary1 hover:bg-primary hover:text-secondary1')
         setGridClick('text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary')
     }
+
+    useEffect(() => {
+        gridLayout();
+    }, []);
 
     return (
         <div id="projects">

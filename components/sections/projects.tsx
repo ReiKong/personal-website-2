@@ -16,14 +16,14 @@ export default function Projects() {
     const gridLayout = () => {
         setGrid('grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3');
         setList('hidden');
-        setGridClick('text-primary bg-secondary1 hover:bg-primary hover:text-secondary1')
+        setGridClick('text-primary bg-secondary1 hover:bg-secondary1 hover:text-primary')
         setListClick('text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary')
     }
 
     const listLayout = () => {
         setGrid('hidden');
         setList('');
-        setListClick('text-primary bg-secondary1 hover:bg-primary hover:text-secondary1')
+        setListClick('text-primary bg-secondary1 hover:bg-secondary1 hover:text-primary')
         setGridClick('text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary')
     }
 

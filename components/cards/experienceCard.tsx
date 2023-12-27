@@ -14,11 +14,11 @@ export default function ExperienceCard({
     techStack : string[][];
 }) {
     return (
-        <div className="grid grid-cols-4 gap-4">
-            <div className="grid col-span-1">
+        <div className="grid grid-col 1 md:grid-cols-4 gap-4">
+            <div className="grid md:col-span-1">
                 <p className="uppercase text-secondary2">{time}</p>
             </div>
-            <div className="grid col-span-3">
+            <div className="grid md:col-span-3">
                 <p className="font-semibold text-[18px] uppercase mb-2">{role} @ {company}</p>
                 {responsibilities.map(([responsibility], index) => (
                     <span className="text-secondary1/85" key={index}>{responsibility}.</span>

@@ -20,26 +20,26 @@ export default function About() {
                     I enjoy listening to <a href="https://open.spotify.com/user/reiquem" target="_blank">music</a> and eating <a href="https://www.instagram.com/meoweatss/" target="_blank">good food</a>! 
                     Nowadays, I've been playing&nbsp;
                     <a 
-                        href="https://open.spotify.com/track/6SdAztAqklk1zAmUHhU4N7" 
+                        href="https://open.spotify.com/track/6SdAztAqklk1zAmUHhU4N7"
                         target="_blank"
                     >
-                        Taken for a Fool
+                        “Taken for a Fool”
                     </a>
                     , <a 
                         href="https://open.spotify.com/track/2sewj0rFvlr3aEM3bGy12n?si=1de90b2c8aed4592" 
                         target="_blank"
                     >
-                        Twice
+                        “Twice”
                     </a>
                     , and <a 
                         href="https://open.spotify.com/track/6RFJUozEvISL28VHNUBWTQ?si=53b316f619ae4298" 
                         target="_blank"
                         className="hover:text-accent-500"
                     >
-                        Dirtbag Transformation (Still Dirty)
+                        “Dirtbag Transformation (Still Dirty)”
                     </a> 
                     &nbsp;on repeat.
-                    I've been expanding my vinyl collection!</p>
+                    I've been expanding my vinyl collection too, and recently bought “The Dark Side of the Moon”!</p>
             </div>
         </section>
     )

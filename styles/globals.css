@@ -294,9 +294,21 @@ p.table, span.table {
   }
 }
 
+.listCols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 @media only screen and (max-width: 640px) {
   .sweIndex {
     @apply flex flex-col;
+  }
+
+  .listCols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listCols > :nth-child(3) {
+    display: none;
   }
 
   .sideBarLink {

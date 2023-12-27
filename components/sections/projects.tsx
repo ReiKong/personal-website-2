@@ -28,7 +28,12 @@ export default function Projects() {
     }
 
     useEffect(() => {
-        gridLayout();
+        const screenSize = window.innerWidth;                                                               // Adjust default view upon load depending on viewport
+        if (screenSize > 640) {
+            gridLayout();
+          } else {
+            listLayout();
+          }
     }, []);
 
     return (
@@ -60,14 +65,17 @@ export default function Projects() {
                     ))}
                 </div>
                 <div className={`w-[100%] ${list}`}>
-                    <div className="grid grid-cols-4 border-b-[1px] border-b-secondary1 gap-x-[10px]">
+                    <div className="grid listCols border-b-[1px] border-b-secondary1 gap-x-[10px]">
                         {[
+                            ['Year'],
                             ['Project Name'],
                             ['Tech Stack'],
                             ['GitHub'],
                             ['Demo'],
-                        ].map(([content]) => (
-                            <p className="text-secondary1 transition duration-200 font-semibold text-lg uppercase w-full">{content}</p>
+                        ].map(([content], index) => (
+                            <p 
+                                key={index}
+                                className={`{text-secondary1 transition duration-200 font-semibold text-lg uppercase w-full md:${index == 1 && 'md:hidden'}`}>{content}</p>
                         ))}
                     </div>
                     {projects?.map((project, index) => (

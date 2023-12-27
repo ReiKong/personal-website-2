@@ -1,11 +1,12 @@
 import classwise from "../public/images/classwiseCover.png";
 import recipez from "../public/images/recipezCover.png";
-// import mcgilleats from "../public/images/mcgilleatsCover.png";
+import mcgillEats from "../public/images/mcgilleatsCover.png";
 import emptyImage from '../public/images/empty.png'
 
 export const projects = [
     {
         imageSrc: classwise,
+        year: 2023, 
         title: "ClassWise",
         projectLink: "https://classwise-97f745bcadbb.herokuapp.com/",
         githubLink: "#",
@@ -15,14 +16,16 @@ export const projects = [
     {
         imageSrc: recipez,
         title: "RecipeZ",
+        year: 2022, 
         projectLink: "#",
         githubLink: "#",
         description: "A web application which generates recipes using user-input ingredients",
         techStack: "JavaScript, Tailwind CSS, Python, React.js",
     },
     {
-        imageSrc: emptyImage,
+        imageSrc: mcgillEats,
         title: "McGill Eats",
+        year: 2023, 
         projectLink: "#",
         githubLink: "#",
         description: "A web application that displays restaurants, cafés, dining halls, and vending machines around McGill University",

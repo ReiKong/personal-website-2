@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <section id="header" className="flex pb-10 flex-col justify-end items-start self-stretch gap-y-[20px]">
                 <div className="overflow-hidden">
-                    <button className="text-primary uppercase bg-accent-500 px-3 pt-[9px] pb-[7px] rounded-[2px] border-[1px] border-secondary1 animate-rise hover:bg-accent-600 transition duration-200">
+                    <button className="text-primary uppercase bg-accent-500 px-3 pt-[9px] pb-[7px] rounded-[2px] border-[1px] border-secondary1 animate-rise hover:bg-accent-600 transition duration-300">
                         <Link href="/rei_kong_resume.pdf" target="_blank" rel="noreferrer noopener">
                             View Resume  →
                         </Link>
@@ -27,7 +27,7 @@ export default function Header() {
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;&&nbsp;</span>
                             <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">Sociology</a>
                             <span className="font-serif italic text-secondary1 inline-block">&nbsp;@&nbsp;</span>
-                            MCGILL UNIVERSITY.
+                            <span className="cursorMcgill">MCGILL UNIVERSITY.</span>
                         </h1>
                     </div>
                     

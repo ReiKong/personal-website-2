@@ -2,7 +2,8 @@
 
 import { useTheme } from "next-themes";
 import { Link as ScrollLink } from "react-scroll";
-import { BsCircleFill } from "react-icons/bs";
+import Link from "next/link";
+import { BsCircleFill, BsArrowUpRight } from "react-icons/bs";
 import ThemeChanger from "../components/Theme";
 
 export default function SideBar() {
@@ -58,6 +59,31 @@ export default function SideBar() {
             </div>
             <div>
                 <ThemeChanger />
+            </div>
+            <div className="w-full">
+                {[
+                    ['https://github.com/ReiKong', 'GitHub'],
+                    ['https:///www.linkedin.com/in/rei-kong/', 'LinkedIn'],
+                ].map(([link, display]) => (
+                    <a
+                        className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
+                        href={link}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <span className="underline text-secondary1 text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                    </a>
+                ))}
+
+                <Link
+                    className="text-secondary1 text-[16px] hover:primary transition-colors duration-300 hover:font-serif"
+                    href="/rei_kong_resume.pdf"
+                    target="_blank"
+                    rel="noreferrer noopener">
+                    <div className="flex flex-row">
+                        <span className="underline text-secondary1 text-[16px] hover:font-serif">Resumé</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                    </div>
+                </Link>
             </div>
         </div>
     )

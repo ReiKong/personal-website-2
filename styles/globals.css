@@ -124,11 +124,11 @@
 
 /* GENERAL STYLES */
 html, body {
-  @apply bg-primary transition duration-200 scroll-smooth;
+  @apply bg-primary transition duration-300 scroll-smooth delay-0;
 }
 
-h1, h2, h3, h4, p, span {
-  @apply font-sans text-secondary1 transition duration-200;
+h1, h2, h3, h4, p, span, a {
+  @apply font-sans text-secondary1 transition duration-300 delay-0;
 }
 
 #left {
@@ -170,7 +170,7 @@ h1, h2, h3, h4, p, span {
 
 /* CURSOR STYLING */
 .cursorMcgill {
-  cursor: url("../public/images/mcgillCursor.png"), auto;
+  cursor: url("/images/mcgillCursor.png"), auto;
 }
 
 /* ETC */
@@ -212,12 +212,12 @@ h1, h2, h3, h4, p, span {
 }
 
 div.sectionHeader {
-  @apply border-solid border-b-secondary1 border-b-[1px] transition duration-200;
+  @apply border-solid border-b-secondary1 border-b-[1px] transition duration-300;
   width: 100%;
 }
 
 h2.sectionHeader {
-  @apply text-secondary1 font-serif transition duration-200 text-wrap;
+  @apply text-secondary1 font-serif transition duration-300 text-wrap;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -226,7 +226,7 @@ h2.sectionHeader {
 }
 
 .sectionSubheader {
-  @apply text-secondary1 font-sans text-[30px] uppercase transition duration-200;
+  @apply text-secondary1 font-sans text-[30px] uppercase transition duration-300;
   font-style: normal;
   font-weight: 500;
   line-height: 105%; /* 31.5px */
@@ -261,7 +261,7 @@ h2.sectionHeader {
 }
 
 .tableHeader {
-  @apply text-secondary1 border-b-[1px] border-secondary1 transition duration-200 font-semibold text-lg uppercase w-full;
+  @apply text-secondary1 border-b-[1px] border-secondary1 transition duration-300 font-semibold text-lg uppercase w-full;
 }
 
 div.table {
@@ -274,7 +274,7 @@ div.table {
 }
 
 p.table, span.table {
-  @apply normal-case border-b-[1px] border-solid border-secondary3 transition duration-200;
+  @apply normal-case border-b-[1px] border-solid border-secondary3 transition duration-300;
   width: 100%;
 }
 

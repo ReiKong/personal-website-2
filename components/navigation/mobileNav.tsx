@@ -3,7 +3,8 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { BsCircleFill } from "react-icons/bs";
+import Link from "next/link";
+import { BsCircleFill, BsArrowUpRight } from "react-icons/bs";
 import ThemeChanger from "../../components/Theme";
 
 export default function MobileMenu() {
@@ -112,8 +113,30 @@ export default function MobileMenu() {
                     <ThemeChanger />
                 </div>
                 <div className="fixed bottom-[40px] left-[40px]">
-                    <span className="font-serif text-accent-500 text-[60px] tracking-tighter leading-[0.8em]">R<span className="font-serif text-accent-500 italic tracking-tighter">e</span>i K<span className="font-serif text-accent-500 italic tracking-tighter">o</span>ng</span>
-                    
+                    {[
+                        ['https://github.com/ReiKong', 'GitHub'],
+                        ['https:///www.linkedin.com/in/rei-kong/', "LinkedIn"],
+                        ["https://open.spotify.com/user/reiquem", "Spotify"],
+                    ].map(([link, display]) => (
+                        <a
+                            className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <span className="underline text-secondary1 text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                        </a>
+                    ))}
+
+                    <Link
+                        className="text-secondary1 text-[16px] hover:primary transition-colors duration-300 hover:font-serif"
+                        href="/rei_kong_resume.pdf"
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <div className="flex flex-row">
+                            <span className="underline text-secondary1 text-[16px] hover:font-serif">Resumé</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                        </div>
+                    </Link>
                 </div>
                 
             </div>

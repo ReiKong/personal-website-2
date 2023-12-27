@@ -45,7 +45,7 @@ export default function footer() {
                         smooth={true}
                         offset={0}
                         duration={400}
-                        className="cursor-pointer"
+                        className="cursor-pointer text-primary underline hover:text-primary"
                     >
                         Scroll to top
                     </ScrollLink>
@@ -68,7 +68,7 @@ export default function footer() {
                         smooth={true}
                         offset={0}
                         duration={400}
-                        className="text-primary underline hover:font-serif hover:cursor-pointer transition-all ease-in-out duration:200 textScramble"
+                        className="text-primary underline hover:text-primary hover:font-serif hover:cursor-pointer transition-all ease-in-out duration:200 textScramble"
                         data-text-scramble={name}
                     >
                         <sup></sup> {name}

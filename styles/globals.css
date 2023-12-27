@@ -131,6 +131,10 @@ h1, h2, h3, h4, p, span, a {
   @apply font-sans text-secondary1 transition duration-300 delay-0;
 }
 
+a {
+  @apply text-secondary1 hover:text-accent-500 transition duration-300 delay-0
+}
+
 #left {
   gap: 30px;
 }
@@ -170,7 +174,7 @@ h1, h2, h3, h4, p, span, a {
 
 /* CURSOR STYLING */
 .cursorMcgill {
-  cursor: url("/images/mcgillCursor.png"), auto;
+  cursor: url("/images/mcgillCursor1.png"), pointer;
 }
 
 /* ETC */
@@ -274,7 +278,7 @@ div.table {
 }
 
 p.table, span.table {
-  @apply normal-case border-b-[1px] border-solid border-secondary3 transition duration-300;
+  @apply text-secondary1/85 normal-case border-b-[1px] border-solid border-secondary3 transition duration-300;
   width: 100%;
 }
 

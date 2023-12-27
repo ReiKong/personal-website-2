@@ -1,3 +1,6 @@
+import { experience } from "../../data/experienceData";
+import ExperienceCard from "../cards/experienceCard";
+
 export default function Experience() {
     return (
         <section id="experience">
@@ -5,7 +8,11 @@ export default function Experience() {
                 <h2 className="sectionHeader">Experience</h2>
             </div>
             <div>
-                <p>Working on this as well!</p>
+                <div className="">
+                    {experience?.map((experience, index) => (
+                        <ExperienceCard key={index} {...experience} />
+                    ))}
+                </div>
             </div>
         </section>
     )

@@ -63,7 +63,8 @@ export default function SideBar() {
             <div className="w-full">
                 {[
                     ['https://github.com/ReiKong', 'GitHub'],
-                    ['https:///www.linkedin.com/in/rei-kong/', 'LinkedIn'],
+                    ['https:///www.linkedin.com/in/rei-kong/', "LinkedIn"],
+                    ["https://open.spotify.com/user/reiquem", "Spotify"],
                 ].map(([link, display]) => (
                     <a
                         className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"

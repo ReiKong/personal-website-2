@@ -2,10 +2,10 @@
 
 ## Features
 ### Themes
-<div style="display: grid; grid-template-columns: auto auto;">
-    <img src="./public/images/readme/laptop1.png"/>
-    <img src="./public/images/readme/laptop1.png"/>
-</div>
+<img src="./public/images/readme/laptop1.png"/>
+<img src="./public/images/readme/laptop2.png"/>
+<img src="./public/images/readme/laptop3.png"/>
+<img src="./public/images/readme/laptop4.png"/>
 
 
 ## Documentation

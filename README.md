@@ -1,5 +1,5 @@
 # Personal Website
-
+Built with: React.js, Tailwind CSS, TypeScript, HTML
 ## Features
 ### Themes
 <img src="./public/images/readme/laptop1.png"/>

@@ -17,7 +17,7 @@ export default function Header() {
     return (
         <section 
             id="header" 
-            className="h-[calc(100vh-40px)] flex pb-10 flex-col justify-end items-start self-stretch gap-y-[20px] relative"
+            className="h-[calc(100vh-40px)] flex pb-20 sm:pb-10 flex-col justify-end items-start self-stretch gap-y-[20px] relative"
         >
             <div className={`w-full h-full overflow-hidden relative md:inline ${show}`}>
                 <p className={`relative z-10 ${show} ml-2 mt-2 bg-primary px-1 border border-secondary1 rounded w-[236px]`}>Photo via the McGill photo bank</p>

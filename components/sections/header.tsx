@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import mcgillUniversity from "../../public/images/mcgillUniversity.png"
+import mcgillUniversity from "../../public/images/mcgillUniversity.jpg"
 
 export default function Header() {
     const [show, setShow] = useState("hidden");

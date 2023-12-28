@@ -2,7 +2,7 @@
 
 ## Features
 ### Themes
-<div className="grid grid-cols-2">
+<div style="display: grid; grid-template-columns: auto auto;">
     <img src="./public/images/readme/laptop1.png"/>
     <img src="./public/images/readme/laptop1.png"/>
 </div>

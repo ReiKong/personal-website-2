@@ -20,7 +20,7 @@ export default function Header() {
             className="h-[calc(100vh-40px)] flex pb-10 flex-col justify-end items-start self-stretch gap-y-[20px] relative"
         >
             <div className={`w-full h-full overflow-hidden relative md:inline ${show}`}>
-                <p className={`relative z-10 ${show} ml-2 mt-2`}>Photo via the McGill photo bank</p>
+                <p className={`relative z-10 ${show} ml-2 mt-2 bg-primary px-1 border border-secondary1 rounded w-[236px]`}>Photo via the McGill photo bank</p>
                 <Image
                     src={mcgillUniversity}
                     className={`relative z-[1] w-full top-0 left-0 object-cover border border-secondary1 ${show}`}

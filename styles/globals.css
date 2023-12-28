@@ -258,15 +258,17 @@ p.table, span.table {
     @apply flex flex-col;
   }
 
+  .sideBarLink {
+    @apply px-[40px] pt-[20px] pb-[10px] text-[30px] hover:text-primary hover:bg-secondary1 hover:border-b-secondary1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .listCols {
     grid-template-columns: repeat(4, 1fr);
   }
-
+  
   .listCols > :nth-child(3) {
     display: none;
-  }
-
-  .sideBarLink {
-    @apply px-[40px] pt-[20px] pb-[10px] text-[30px] hover:text-primary hover:bg-secondary1 hover:border-b-secondary1;
   }
 }

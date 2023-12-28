@@ -8,6 +8,7 @@ export const projects = [
         imageSrc: classwise,
         year: 2023, 
         title: "ClassWise",
+        links: [["https://classwise-97f745bcadbb.herokuapp.com/", "Demo"]],
         projectLink: "https://classwise-97f745bcadbb.herokuapp.com/",
         githubLink: "#",
         description: "A web application for streamlined class and instructor research by students.",

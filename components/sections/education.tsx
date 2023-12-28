@@ -13,7 +13,7 @@ export default function Education() {
                     <p>3.68 / 4.00 GPA</p>
                 </div>
 
-                <div className="coursework">
+                <div className="flex flex-col items-start w-full gap-[10px]">
                     <h3 className="sectionSubheader">Coursework</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[20px] gap-x-4 w-[100%]">
                         <details className="flex flex-col items-start gap-y-[4px] w-[100%]">
@@ -71,7 +71,7 @@ export default function Education() {
                     </div>
                 </div>
 
-                <div className="coursework">
+                <div className="flex flex-col items-start w-full gap-[10px]">
                     <h3 className="sectionSubheader">Activities</h3>
                     <div className="table">
                         {[

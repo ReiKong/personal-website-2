@@ -52,7 +52,7 @@ export default function footer() {
                 </div>
             </div>
 
-            <div className="text-primary text-xl font-medium font-sans pt-[40px]">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
+            <div className="text-primary text-xl font-medium font-sans pt-[40px] hidden">DESIGNED & BUILT WITH LOVE BY REI KONG</div>
             
             <div className="flex flex-col">
                 {[

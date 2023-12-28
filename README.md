@@ -2,7 +2,10 @@
 
 ## Features
 ### Themes
-<img src="./public/images/readme/laptop1.png"/>
+<div className="grid grid-cols-2">
+    <img src="./public/images/readme/laptop1.png"/>
+    <img src="./public/images/readme/laptop1.png"/>
+</div>
 
 
 ## Documentation

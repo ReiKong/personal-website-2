@@ -13,7 +13,7 @@ const ThemeChanger = () => {
     if (!mounted) return null;
 
   return (
-    <div className="flex justify-between gap-x-2 mt-[20px]">
+    <div className="flex flex-col xl:flex-row items-end justify-end gap-[8px]">
       {[
           ['text-[#F4F1EA]', 'beige'],
           ['text-[#382A23]', 'brown'],
@@ -21,7 +21,7 @@ const ThemeChanger = () => {
           ['text-[#FFFFFF]', 'white'],
           ['text-[#D0D8CC]', 'lightgreen'],
       ].map(([color, theme]) => (
-        <div class="pt-[20px] text-[30px] sm:text-[22px]">
+        <div class="text-[30px] sm:text-[22px]">
           <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer hover:border-accent-500 transition duration-200`} onClick={() => setTheme(theme)}/>
         </div>
       ))}

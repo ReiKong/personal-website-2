@@ -57,34 +57,36 @@ export default function SideBar() {
                     <sup>05</sup>  Projects
                 </ScrollLink>
             </div>
-            <div>
-                <ThemeChanger />
-            </div>
-            <div className="w-full">
-                {[
-                    ['https://github.com/ReiKong', 'GitHub'],
-                    ['https:///www.linkedin.com/in/rei-kong/', "LinkedIn"],
-                    ["https://open.spotify.com/user/reiquem", "Spotify"],
-                ].map(([link, display]) => (
-                    <a
-                        className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
-                        href={link}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >
-                        <span className="underline text-secondary1 text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
-                    </a>
-                ))}
+            <div className="w-full mt-auto grid grid-cols-2 items-end">
+                <div className="col-span-1">
+                    {[
+                        ['https://github.com/ReiKong', 'GitHub'],
+                        ['https:///www.linkedin.com/in/rei-kong/', "LinkedIn"],
+                        ["https://open.spotify.com/user/reiquem", "Spotify"],
+                    ].map(([link, display]) => (
+                        <a
+                            className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
+                            href={link}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <span className="underline text-secondary1 text-[16px] transition-colors duration-300 hover:font-serif">{display}</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                        </a>
+                    ))}
 
-                <Link
-                    className="text-secondary1 text-[16px] hover:primary transition-colors duration-300 hover:font-serif"
-                    href="/rei_kong_resume.pdf"
-                    target="_blank"
-                    rel="noreferrer noopener">
-                    <div className="flex flex-row">
-                        <span className="underline text-secondary1 text-[16px] hover:font-serif">Resumé</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
-                    </div>
-                </Link>
+                    <Link
+                        className="text-secondary1 text-[16px] hover:primary transition-colors duration-300 hover:font-serif"
+                        href="/rei_kong_resume.pdf"
+                        target="_blank"
+                        rel="noreferrer noopener">
+                        <div className="flex flex-row">
+                            <span className="underline text-secondary1 text-[16px] hover:font-serif">Resumé</span> &nbsp;&nbsp; <BsArrowUpRight className="mt-[3px]" />
+                        </div>
+                    </Link>
+                </div>
+                <div className="col-span-1">
+                    <ThemeChanger />
+                </div>
             </div>
         </div>
     )

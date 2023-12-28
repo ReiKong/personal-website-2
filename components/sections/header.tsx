@@ -31,7 +31,7 @@ export default function Header() {
             </div>
             <div className="h-[42px]">
                 <button className="text-primary uppercase bg-accent-500 px-3 pt-[9px] pb-[7px] rounded-[2px] border-[1px] border-secondary1 animate-rise hover:bg-accent-600 transition duration-300">
-                    <Link href="/rei_kong_resume.pdf" target="_blank" rel="noreferrer noopener">
+                    <Link href="/rei_kong_resume.pdf" target="_blank" rel="noreferrer noopener" className="hover:text-secondary1">
                         View Resume  →
                     </Link>
                 </button>

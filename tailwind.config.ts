@@ -27,14 +27,20 @@ const config: Config = {
         'height': 'height',
       },
       animation: {
-        rise: 'rise 1.3s ease',
+        rise: 'rise 1s ease',
         fall: 'fall 0.5s ease-in-out forwards'
         }
       },
       keyframes: {
         rise: {
-          '0%': { transform: 'translate(0%,150%) skewX(0deg)' },
-          '100%': { transform: 'translate(0%,0%) skewX(0deg)' },
+          '0%': { 
+            transform: 'translate(0%,100%) skewX(0deg)',
+            opacity: '0',
+          },
+          '100%': { 
+            transform: 'translate(0%,0%) skewX(0deg)',
+            opacity: '100',
+          },
         },
         fall: {
           '0%': { transform: 'translate(0%,-150%) skewX(0deg) scaleY(0)' },

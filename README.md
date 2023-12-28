@@ -2,7 +2,8 @@
 
 ## Features
 ### Themes
-[Beige theme](./public/images/readme/laptop1.png)
+<img src="./public/images/readme/laptop1.png"/>
+
 
 ## Documentation
 

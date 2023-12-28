@@ -109,7 +109,7 @@ export default function MobileMenu() {
                 >
                     <sup>05</sup>  Projects
                 </ScrollLink>
-                <div className="px-[40px]">
+                <div className="fixed bottom-[40px] right-[40px]">
                     <ThemeChanger />
                 </div>
                 <div className="fixed bottom-[40px] left-[40px]">

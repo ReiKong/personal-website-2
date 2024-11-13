@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 
 export default function Home() {
   return (
+  
     <div className="flex flex-col">
       <MobileMenu />
       <div className="sweIndex">

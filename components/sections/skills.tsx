@@ -23,6 +23,7 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-1 flex-col items-start gap-y-[4px]">
                     <h3 className="sectionSubheader">Tools & Technologies</h3>
+                    <h3 className="sectionSubheader hidden sm:inline"><br/></h3>
                     {[
                         ['Git'],
                         ['React.js'],

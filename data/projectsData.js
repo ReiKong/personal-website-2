@@ -24,7 +24,7 @@ export const projects = [
         links: [["#", "Demo"]],
         projectLink: "https://architecture-verb-list.netlify.app/",
         githubLink: "https://github.com/ReiKong/architecture-verb-list-generator",
-        description: "A pedagogical tool made for Year 1 Architecture students at the National University of Singapore. Students select one verb that describes architecture and click \"Generate\" to receive a random verb. They use this combination to develop a project that revolves around the verbs.",
+        description: "A pedagogical tool made for 25+ Year 1 Architecture students at the National University of Singapore. Students select one verb that describes architecture and click \"Generate\" to receive a random verb. They use this combination to develop a project that revolves around the verbs.",
         techStack: "TypeScript",
     },
     {

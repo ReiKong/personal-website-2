@@ -75,9 +75,9 @@ export default function Education() {
                     <h3 className="sectionSubheader">Activities</h3>
                     <div className="table">
                         {[
-                            ['Hack4Impact', 'President, VP Finance'],
-                            ['CodeJam13', 'Lead Designer'],
-                            ['McGill Association of North American Born Asians', 'Webmaster, VP Finance'],
+                            ['Hack4Impact', 'Executive Director, VP Finance'],
+                            ['CodeJam Hackathon Committee', 'Design Lead'],
+                            ['McGill Association of North American Born Asians', 'Senior Creative Director, Webmaster, VP Finance'],
                             ['Arts Undergraduate Society', 'Tutor'],
                             ['Tech Fair', 'Volunteer'],
                             ['World Vision', 'VP Finance'],

@@ -5,7 +5,7 @@ import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Rei Kong',
-  description: 'Rei Kong | Developer, Designer, & Student',
+  description: 'Rei Kong | Software Engineering, Product, Design',
 }
 
 export default function RootLayout({

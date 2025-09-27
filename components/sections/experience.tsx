@@ -9,8 +9,12 @@ export default function Experience() {
             </div>
             <div>
                 <div className="">
-                    {experience?.map((experience, index) => (
-                        <ExperienceCard key={index} {...experience} />
+                    {experience?.map((exp, index) => (
+                        <ExperienceCard
+                            key={index}
+                            {...exp}
+                            techStack={exp.techStack ?? []}
+                        />
                     ))}
                 </div>
             </div>

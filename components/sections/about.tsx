@@ -7,10 +7,10 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <h3 className="sectionSubheader">A little about me...</h3>
-                    <p className="text-secondary1/85">I'm a developer and designer who loves a good challenge!</p>
-                    <span>Right now, I'm a sophomore student <a href="https://www.mcgill.ca/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@McGill University</a>, 
+                    <p className="text-secondary1/85">I'm a software engineer and designer who loves a good challenge!</p>
+                    <span>Right now, I'm a fourth year student <a href="https://www.mcgill.ca/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@McGill University</a>, 
                         volunteering at <a href="https://mcgill.hack4impact.org/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@Hack4Impact</a>,&nbsp;
-                        <a href="https://codejam.mcgilleus.ca/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@Code Jam</a>, 
+                        <a href="https://codejam.mcgilleus.ca/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@CodeJam Hackathon Committee</a>, 
                         and previously <a href="https://designconsultancy.ssmu.ca/" className="font-semibold cursor-pointer hover:text-accent-500 transition-colors duration-150">@McGill Design Consultancy</a>.
                     </span>
                     <span> I have experience in web development and have been working with Python, Java, and React.js more recently. I aim to become more proficient in frameworks like Django.</span>

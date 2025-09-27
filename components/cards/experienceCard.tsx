@@ -14,7 +14,7 @@ export default function ExperienceCard({
     techStack : string[][];
 }) {
     return (
-        <div className="grid grid-col 1 md:grid-cols-4 gap-4">
+        <div className="grid grid-col 1 md:grid-cols-4 gap-4 mb-8">
             <div className="grid md:col-span-1">
                 <p className="uppercase text-secondary2">{time}</p>
             </div>

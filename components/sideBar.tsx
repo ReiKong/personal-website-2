@@ -8,7 +8,15 @@ import ThemeChanger from "../components/Theme";
 export default function SideBar() {
     return(
         <div id="left" className="gap-[30px] hidden sm:sticky sm:top-0 sm:p-10 sm:flex sm:flex-col sm:items-start sm:self-stretch sm:h-[100vh] border-b-[1px] border-b-secondary1">
-            <span className="font-sans uppercase text-accent-500 text-[80px] tracking-tighter leading-[0.8em]">Rei<span className="font-[Meno Banner] text-accent-500 italic tracking-tighter"> Kong</span></span>
+            <Link
+                href="/"
+                aria-label="Home"
+                title="Home"
+                className="group block w-full font-sans uppercase !text-accent-500 text-[80px] tracking-tighter leading-[0.8em] cursor-pointer transition-colors duration-200 hover:!text-secondary1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-500"
+            >
+                <span className="text-inherit">Rei</span>
+                <span className="font-[Meno Banner] italic tracking-tighter text-inherit"> Kong</span>
+            </Link>
             <div className="flex flex-col gap-y-[10px] w-[100%]">
                 <Link href="/about" className="sideBarLink">
                     <sup>01</sup>  About

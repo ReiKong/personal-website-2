@@ -1,22 +1,10 @@
 "use client";
 
-import { animateScroll } from "react-scroll"
-import { 
-    BsLinkedin,
-    BsGithub,
-    BsFileEarmarkFill,
-} from "react-icons/bs";
 import Link from "next/link";
-import { Link as ScrollLink } from "react-scroll";
 import { TextScramble } from '../../styles/TextScramble'
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BsArrowUp } from "react-icons/bs";
 import { BsArrowUpRight } from "react-icons/bs";
-
-const options = {
-    duration: 500,
-    smooth: true,
-};
 
 export default function footer() {
     useEffect(() => {
@@ -39,16 +27,12 @@ export default function footer() {
                 </div>
                 <div className="scrollToTop">
                     <BsArrowUp />
-                    <ScrollLink
-                        to="header"
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={400}
+                    <Link
+                        href="/#header"
                         className="cursor-pointer text-primary underline hover:text-primary"
                     >
                         Scroll to top
-                    </ScrollLink>
+                    </Link>
                 </div>
             </div>
 
@@ -56,23 +40,21 @@ export default function footer() {
             
             <div className="flex flex-col">
                 {[
-                    ['about', '01', 'About'],
-                    ['experience', '02', 'Experience'],
-                    ['education', '03', 'Education'],
-                    ['skills', '04', 'Skills'],
-                    ['projects', '05', 'Projects'],
-                ].map(([section, index, name]) => (
-                    <ScrollLink
-                        to={section}
-                        spy={true}
-                        smooth={true}
-                        offset={0}
-                        duration={400}
+                    ['/about', 'About'],
+                    ['/work', 'Work'],
+                    ['/projects', 'Projects'],
+                    ['/playground', 'Playground'],
+                    ['/photography', 'Photography'],
+                    ['/writing', 'Writing'],
+                ].map(([href, name]) => (
+                    <Link
+                        key={href}
+                        href={href}
                         className="text-primary underline hover:text-primary hover:font-serif hover:cursor-pointer transition-all ease-in-out duration:200 textScramble"
                         data-text-scramble={name}
                     >
                         <sup></sup> {name}
-                    </ScrollLink>
+                    </Link>
                 ))}
             </div>
             <div className="flex flex-row justify-between items-end sm:items-start">

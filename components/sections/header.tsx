@@ -29,27 +29,24 @@ export default function Header() {
                     alt="McGill University"
                 />
             </div>
-            <div className="h-[42px]">
+            {/* <div className="h-[42px]">
                 <button className="text-primary uppercase bg-accent-500 px-3 pt-[9px] pb-[7px] rounded-[2px] border-[1px] border-secondary1 animate-rise hover:bg-accent-600 transition duration-300">
                     <Link href="/rei_kong_resume.pdf" target="_blank" rel="noreferrer noopener" className="hover:text-secondary1">
                         View Resume  →
                     </Link>
                 </button>
-            </div>
+            </div> */}
             
             <div className="w-[100%] flex flex-col gap-0">
 
-                <h1 className="h1Header inline-block animate-rise leading-none">DEVELOPER <span className="font-serif italic">&</span> DESIGNER.</h1>
-
-
-                <h1 className="h1Header animate-rise leading-none">CURRENTLY IN MONTRÉAL.</h1>
-
                 <h1 className="h1Header text-secondary1 animate-rise leading-none">
-                    <span className="font-serif italic text-secondary1 inline-block">&nbsp;STUDYING&nbsp;</span>
-                    <a href="https://www.cs.mcgill.ca/" className="uppercase hover:text-accent-500 transition-colors duration-300">Computer Science</a>
-                    <span className="font-serif italic text-secondary1 inline-block">&nbsp;&&nbsp;</span>
-                    <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">Sociology</a>
-                    <span className="font-serif italic text-secondary1 inline-block">&nbsp;@&nbsp;</span>
+                    <span className="font-serif italic text-secondary1">INTERDISCIPLINARY</span> SOFTWARE ENGINEER{" "}
+                    <span className="font-serif italic text-secondary1">&</span> DESIGNER{" "}
+                    <span className="font-serif italic text-secondary1">STUDYING</span>{" "}
+                    <a href="https://www.cs.mcgill.ca/" className="uppercase hover:text-accent-500 transition-colors duration-300">COMPUTER SCIENCE</a>{" "}
+                    &{" "}
+                    <a href="https://www.mcgill.ca/sociology/" className="uppercase hover:text-accent-500 transition-colors duration-300">SOCIOLOGY</a>{" "}
+                    <span className="font-serif italic text-secondary1">@</span>{" "}
                     <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>MCGILL UNIVERSITY.</span>
                 </h1>
 

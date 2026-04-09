@@ -1,14 +1,11 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
-import { BsCircleFill, BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 import ThemeChanger from "../../components/Theme";
 
 export default function MobileMenu() {
-    const openMenuHeight = `calc(100vh-54px)`;
     const [open, setOpen] = useState('Menu');
     const [visible, setVisible] = useState('hidden');
     const [height, setHeight] = useState('0vh');
@@ -34,14 +31,6 @@ export default function MobileMenu() {
         }
       }, [noScroll]);
 
-    const [offset, setOffset] = useState(0);
-
-    useEffect(() => {
-    // Calculate the pixel value for 100vh
-    const vh = window.innerHeight * 0.01;
-    setOffset(-100 * vh);
-    }, []);
-
     return (
         <div className="w-[100%] top-0 sticky z-[3] pt-[4px] bg-primary flex flex-col sm:hidden">
             <div className="border-b-[1px] border-b-secondary1 px-[40px] h-[50px]">
@@ -54,61 +43,24 @@ export default function MobileMenu() {
             </div>
             
             <div className={`border-b-[0px] ${height} ${visible} sm:hidden sm:h-[0vh] hover:screenMinus54 transition-height duration-300 ease-in-out`}>
-                <ScrollLink
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={offset}
-                    duration={500}
-                    className="sideBarLink"
-                    onClick={changeText}
-                >
+                <Link href="/about" className="sideBarLink" onClick={changeText}>
                     <sup>01</sup>  About
-                </ScrollLink>
-                <ScrollLink
-                    to="experience"
-                    spy={true}
-                    smooth={true}
-                    offset={offset}
-                    duration={500}
-                    className="sideBarLink"
-                    onClick={changeText}
-                >
-                    <sup>02</sup>  Experience
-                </ScrollLink>
-                <ScrollLink
-                    to="education"
-                    spy={true}
-                    smooth={true}
-                    offset={offset}
-                    duration={500}
-                    className="sideBarLink"
-                    onClick={changeText}
-                >
-                    <sup>03</sup>  Education
-                </ScrollLink>
-                <ScrollLink
-                    to="skills"
-                    spy={true}
-                    smooth={true}
-                    offset={offset}
-                    duration={500}
-                    className="sideBarLink"
-                    onClick={changeText}
-                >
-                    <sup>04</sup>  Skills
-                </ScrollLink>
-                <ScrollLink
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={offset}
-                    duration={500}
-                    className="sideBarLink"
-                    onClick={changeText}
-                >
-                    <sup>05</sup>  Projects
-                </ScrollLink>
+                </Link>
+                <Link href="/work" className="sideBarLink" onClick={changeText}>
+                    <sup>02</sup>  Work
+                </Link>
+                <Link href="/projects" className="sideBarLink" onClick={changeText}>
+                    <sup>03</sup>  Projects
+                </Link>
+                <Link href="/playground" className="sideBarLink" onClick={changeText}>
+                    <sup>04</sup>  Playground
+                </Link>
+                <Link href="/photography" className="sideBarLink" onClick={changeText}>
+                    <sup>05</sup>  Photography
+                </Link>
+                <Link href="/writing" className="sideBarLink" onClick={changeText}>
+                    <sup>06</sup>  Writing
+                </Link>
                 <div className="fixed bottom-[40px] right-[40px]">
                     <ThemeChanger />
                 </div>

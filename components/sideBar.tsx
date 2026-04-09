@@ -1,7 +1,6 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import { BsCircleFill, BsArrowUpRight } from "react-icons/bs";
 import ThemeChanger from "../components/Theme";
@@ -11,51 +10,24 @@ export default function SideBar() {
         <div id="left" className="gap-[30px] hidden sm:sticky sm:top-0 sm:p-10 sm:flex sm:flex-col sm:items-start sm:self-stretch sm:h-[100vh] border-b-[1px] border-b-secondary1">
             <span className="font-sans uppercase text-accent-500 text-[80px] tracking-tighter leading-[0.8em]">Rei<span className="font-[Meno Banner] text-accent-500 italic tracking-tighter"> Kong</span></span>
             <div className="flex flex-col gap-y-[10px] w-[100%]">
-                <ScrollLink
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={400}
-                    className="sideBarLink">
+                <Link href="/about" className="sideBarLink">
                     <sup>01</sup>  About
-                </ScrollLink>
-                <ScrollLink
-                    to="experience"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={400}
-                    className="sideBarLink">
-                    <sup>02</sup>  Experience
-                </ScrollLink>
-                <ScrollLink
-                    to="education"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={400}
-                    className="sideBarLink">
-                    <sup>03</sup>  Education
-                </ScrollLink>
-                <ScrollLink
-                    to="skills"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={400}
-                    className="sideBarLink">
-                    <sup>04</sup>  Skills
-                </ScrollLink>
-                <ScrollLink
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={400}
-                    className="sideBarLink">
-                    <sup>05</sup>  Projects
-                </ScrollLink>
+                </Link>
+                <Link href="/work" className="sideBarLink">
+                    <sup>02</sup>  Work
+                </Link>
+                <Link href="/projects" className="sideBarLink">
+                    <sup>03</sup>  Projects
+                </Link>
+                <Link href="/playground" className="sideBarLink">
+                    <sup>04</sup>  Playground
+                </Link>
+                <Link href="/photography" className="sideBarLink">
+                    <sup>05</sup>  Photography
+                </Link>
+                <Link href="/writing" className="sideBarLink">
+                    <sup>06</sup>  Writing
+                </Link>
             </div>
             <div className="w-full mt-auto grid grid-cols-2 items-end">
                 <div className="col-span-1">

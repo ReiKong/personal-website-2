@@ -1,4 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const path = require("path");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Use this app as the tracing root when other lockfiles exist elsewhere on the machine.
+  outputFileTracingRoot: path.join(__dirname),
+};
+
+module.exports = nextConfig;

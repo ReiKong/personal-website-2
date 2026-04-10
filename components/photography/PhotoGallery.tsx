@@ -86,7 +86,7 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
         ))}
       </div>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2">
+      <div className="columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2">
         {filteredPhotos.map((photo) => {
           const category = categories.find(cat => cat.id === photo.category);
           return (

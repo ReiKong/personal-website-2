@@ -3,7 +3,7 @@ import myBookings from "../public/images/MyBookingsCover.png"
 import architectureVerbListGen from "../public/images/ArchitectureVerbListGeneratorCover.png"
 import classwise from "../public/images/classwiseCover.png";
 import recipez from "../public/images/recipezCover.png";
-import mcgillEats from "../public/images/mcgilleatsCover.png";
+import mcgillEats from "../public/images/mcgillEatsCover.png";
 import emptyImage from '../public/images/empty.png'
 
 export const projects = [

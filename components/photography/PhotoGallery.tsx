@@ -82,13 +82,13 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
         ))}
       </div>
 
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 space-y-4">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-2 space-y-2">
         {filteredPhotos.map((photo) => {
           const category = categories.find(cat => cat.id === photo.category);
           return (
             <div key={`${photo.category}-${photo.id}`} className="break-inside-avoid">
               <div 
-                className="relative overflow-hidden mb-4 group cursor-pointer"
+                className="relative overflow-hidden mb-2 group cursor-pointer"
                 onClick={() => setModalImage({
                   src: `${category?.path}/${photo.filename}`,
                   alt: photo.title || photo.filename

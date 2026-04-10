@@ -59,30 +59,29 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
 
   return (
     <div>
-      <div className="flex flex-row align-middle items-center border-t border-t-secondary1 border-b border-b-secondary1 mb-8">
-        <div 
-          className={`flex flex-row align-middle border-r border-r-secondary1 cursor-pointer ${
-            selectedCategory === 'all' 
+      <div className="flex flex-wrap gap-2 mb-8">
+        <button
+          onClick={() => setSelectedCategory('all')}
+          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            selectedCategory === 'all'
               ? 'text-primary bg-secondary1 hover:bg-secondary1 hover:text-primary'
               : 'text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary'
-          } pt-2 pb-1 pr-2 px-1 gap-x-2 transition duration-200`}
-          onClick={() => setSelectedCategory('all')}
+          }`}
         >
-          {/* <BsFillGridFill className="text-[20px]" /> */}
           All Photos
-        </div>
-        {categories.map((category, index) => (
-          <span 
+        </button>
+        {categories.map((category) => (
+          <button
             key={category.id}
-            className={`flex flex-row align-middle cursor-pointer ${
+            onClick={() => setSelectedCategory(category.id)}
+            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
               selectedCategory === category.id
                 ? 'text-primary bg-secondary1 hover:bg-secondary1 hover:text-primary'
                 : 'text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary'
-            } ${index < categories.length - 1 ? 'border-r border-r-secondary1' : ''} pt-2 pb-1 pr-2 px-1 gap-x-2 transition duration-200`}
-            onClick={() => setSelectedCategory(category.id)}
+            }`}
           >
             {category.name}
-          </span>
+          </button>
         ))}
       </div>
 

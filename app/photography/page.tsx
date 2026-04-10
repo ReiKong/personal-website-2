@@ -1,28 +1,13 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import SideBar from "../../components/sideBar";
 import Footer from "../../components/navigation/footer";
 import MobileMenu from "../../components/navigation/mobileNav";
 import PhotoGallery from "../../components/photography/PhotoGallery";
 import { ViewMode, PhotoCategory } from "../../data/photography";
+import { getPhotoCategoriesServer } from "../../lib/loadPhotosServer";
 
 export default function PhotographyPage() {
-    const [categories, setCategories] = useState<PhotoCategory[]>([]);
-
-    useEffect(() => {
-        async function loadCategories() {
-            try {
-                const response = await fetch('/api/photos');
-                const loadedCategories = await response.json();
-                setCategories(loadedCategories);
-            } catch (error) {
-                console.error('Error loading photo categories:', error);
-            }
-        }
-        loadCategories();
-    }, []);
+    const categories = getPhotoCategoriesServer();
 
     return (
         <div className="flex flex-col">

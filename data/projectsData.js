@@ -3,7 +3,6 @@ import myBookings from "../public/images/MyBookingsCover.png"
 import architectureVerbListGen from "../public/images/ArchitectureVerbListGeneratorCover.png"
 import classwise from "../public/images/classwiseCover.png";
 import recipez from "../public/images/recipezCover.png";
-import mcgillEats from "../public/images/mcgillEatsCover.png";
 import emptyImage from '../public/images/empty.png'
 
 export const projects = [
@@ -55,14 +54,5 @@ export const projects = [
         githubLink: "#",
         description: "A web application which generates recipes using user-input ingredients",
         techStack: "JavaScript, Tailwind CSS, Python, React.js",
-    },
-    {
-        imageSrc: mcgillEats,
-        title: "McGill Eats",
-        year: 2023, 
-        projectLink: "#",
-        githubLink: "#",
-        description: "A web application that displays restaurants, cafés, dining halls, and vending machines around McGill University",
-        techStack: "React.js, JavaScript, CSS, Python, Django",
     },
 ];

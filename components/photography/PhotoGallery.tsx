@@ -15,16 +15,28 @@ interface ModalImage {
   alt: string;
 }
 
-export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps) {
+interface GalleryPhoto {
+  id: string | number;
+  filename: string;
+  title?: string;
+  category: string;
+  categoryPath: string;
+}
+
+export default function PhotoGallery({
+  categories,
+  viewMode,
+}: PhotoGalleryProps) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [modalImage, setModalImage] = useState<ModalImage | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const syncCategoryFromHash = () => {
       const hash = window.location.hash.slice(1);
-      setSelectedCategory(
-        hash && categories.some((category) => category.id === hash) ? hash : "all"
-      );
+      const isValidCategory = categories.some((category) => category.id === hash);
+
+      setSelectedCategory(hash && isValidCategory ? hash : "all");
     };
 
     syncCategoryFromHash();
@@ -34,11 +46,18 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
   }, [categories]);
 
   const handleCategoryChange = (categoryId: string) => {
+    const newUrl =
+      categoryId === "all"
+        ? window.location.pathname
+        : `${window.location.pathname}#${categoryId}`;
+
+    window.history.replaceState(null, "", newUrl);
     setSelectedCategory(categoryId);
-    window.history.replaceState(
-      null,
-      "",
-      categoryId === "all" ? window.location.pathname : `#${categoryId}`
+  };
+
+  const handleImageLoad = (imageKey: string) => {
+    setLoadedImages((prev) =>
+      prev[imageKey] ? prev : { ...prev, [imageKey]: true }
     );
   };
 
@@ -54,7 +73,7 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
     [categories, selectedCategory]
   );
 
-  const filteredPhotos =
+  const filteredPhotos: GalleryPhoto[] =
     selectedCategory === "all"
       ? categories.flatMap((category) =>
           category.photos.map((photo) => ({
@@ -74,39 +93,78 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
         : "text-secondary1 bg-primary hover:bg-secondary1 hover:text-primary"
     }`;
 
+  const getImageKey = (photo: { category: string; id: string | number }) =>
+    `${photo.category}-${photo.id}`;
+
+  const renderImage = (
+    photo: GalleryPhoto,
+    extraClassName = "",
+    hoverOverlay = false
+  ) => {
+    const imageKey = getImageKey(photo);
+    const isLoaded = loadedImages[imageKey];
+
+    return (
+      <div
+        className={`group relative cursor-pointer overflow-hidden ${extraClassName}`}
+        onClick={() =>
+          openModal(
+            photo.categoryPath,
+            photo.filename,
+            photo.title || photo.filename
+          )
+        }
+      >
+        {!isLoaded && (
+          <div className="absolute inset-0 animate-pulse bg-gray-200 dark:bg-gray-800" />
+        )}
+
+        <Image
+          src={`${photo.categoryPath}/${photo.filename}`}
+          alt={photo.title || photo.filename}
+          width={400}
+          height={300}
+          loading="lazy"
+          quality={75}
+          onLoadingComplete={() => handleImageLoad(imageKey)}
+          className={`w-full object-cover transition-all duration-700 ${
+            isLoaded
+              ? "blur-0 scale-100 opacity-100"
+              : "blur-2xl scale-105 opacity-60"
+          } ${hoverOverlay ? "group-hover:scale-105" : "hover:scale-105"}`}
+          style={{ height: "auto" }}
+        />
+
+        {hoverOverlay && (
+          <div className="absolute inset-0 bg-black bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-30" />
+        )}
+      </div>
+    );
+  };
+
   if (viewMode === "list") {
     return (
       <div className="space-y-6">
         {categories.map((category) => (
-          <div key={category.id} className="border border-gray-200 dark:border-gray-700 p-6">
+          <div
+            key={category.id}
+            className="border border-gray-200 p-6 dark:border-gray-700"
+          >
             <h3 className="mb-2 text-xl font-semibold">{category.name}</h3>
-            <p className="mb-4 text-gray-600 dark:text-gray-400">{category.description}</p>
+            <p className="mb-4 text-gray-600 dark:text-gray-400">
+              {category.description}
+            </p>
 
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-              {category.photos.map((photo) => (
-                <div
-                  key={photo.id}
-                  className="relative aspect-square cursor-pointer overflow-hidden rounded-lg transition-transform duration-300 hover:scale-105"
-                  onClick={() =>
-                    openModal(
-                      category.path,
-                      photo.filename,
-                      photo.title || photo.filename
-                    )
-                  }
-                >
-                  <Image
-                    src={`${category.path}/${photo.filename}`}
-                    alt={photo.title || photo.filename}
-                    fill
-                    className="object-cover"
-                    loading="lazy"
-                    quality={75}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A"
-                  />
-                </div>
-              ))}
+              {category.photos.map((photo) =>
+                renderImage(
+                  {
+                    ...photo,
+                    categoryPath: category.path,
+                  },
+                  "relative aspect-square rounded-lg transition-transform duration-300"
+                )
+              )}
             </div>
           </div>
         ))}
@@ -137,30 +195,9 @@ export default function PhotoGallery({ categories, viewMode }: PhotoGalleryProps
 
       <div className="columns-2 gap-2 space-y-2 md:columns-3 lg:columns-4">
         {filteredPhotos.map((photo) => (
-          <div key={`${photo.category}-${photo.id}`} className="break-inside-avoid">
-            <div
-              className="group relative mb-2 cursor-pointer overflow-hidden"
-              onClick={() =>
-                openModal(
-                  photo.categoryPath,
-                  photo.filename,
-                  photo.title || photo.filename
-                )
-              }
-            >
-              <Image
-                src={`${photo.categoryPath}/${photo.filename}`}
-                alt={photo.title || photo.filename}
-                width={400}
-                height={300}
-                className="w-full object-cover transition-transform duration-300 hover:scale-105"
-                style={{ height: "auto" }}
-                loading="lazy"
-                quality={75}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA/8A8A"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-30" />
+          <div key={getImageKey(photo)} className="break-inside-avoid">
+            <div className="mb-2">
+              {renderImage(photo, "", true)}
             </div>
           </div>
         ))}

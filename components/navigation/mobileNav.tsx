@@ -71,6 +71,7 @@ export default function MobileMenu() {
                         ["https://open.spotify.com/user/reiquem", "Spotify"],
                     ].map(([link, display]) => (
                         <a
+                            key={link}
                             className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"
                             href={link}
                             target="_blank"

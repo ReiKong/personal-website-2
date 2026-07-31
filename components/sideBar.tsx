@@ -43,7 +43,7 @@ export default function SideBar() {
                         ["https://github.com/ReiKong", "GitHub"],
                         ["https:///www.linkedin.com/in/rei-kong/", "LinkedIn"],
                         ["https://open.spotify.com/user/reiquem", "Spotify"],
-                        ["https://curius.app/rei-kong", "What I'm Reading"],
+                        ["https://curius.app/rei-kong", "Bookshelf"],
                     ].map(([link, display]) => (
                         <a
                             className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"

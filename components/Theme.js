@@ -21,7 +21,7 @@ const ThemeChanger = () => {
           ['text-[#FFFFFF]', 'white'],
           ['text-[#D0D8CC]', 'lightgreen'],
       ].map(([color, theme]) => (
-        <div class="text-[30px] sm:text-[22px]">
+        <div className="text-[30px] sm:text-[22px]">
           <BsCircleFill className={`${color} border-secondary1 border-[1px] rounded-full hover:cursor-pointer hover:border-accent-500 transition duration-200`} onClick={() => setTheme(theme)}/>
         </div>
       ))}

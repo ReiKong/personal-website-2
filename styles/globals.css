@@ -133,12 +133,18 @@ html, body {
   @apply bg-primary transition duration-300 scroll-smooth delay-0;
 }
 
-h1, h2, h3, h4, p, span, a {
+h1, h2, h3, h4, p, span, a, li {
   @apply font-sans text-secondary1 transition duration-300 delay-0;
 }
 
 a {
   @apply text-secondary1 hover:text-accent-500 transition duration-300 delay-0
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-left: 1.5rem;
 }
 
 .sweIndex {

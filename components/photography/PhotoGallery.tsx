@@ -126,7 +126,7 @@ export default function PhotoGallery({
           height={300}
           loading="lazy"
           quality={75}
-          onLoadingComplete={() => handleImageLoad(imageKey)}
+          onLoad={() => handleImageLoad(imageKey)}
           className={`w-full object-cover transition-all duration-700 ${
             isLoaded
               ? "blur-0 scale-100 opacity-100"

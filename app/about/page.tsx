@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import SideBar from "../../components/sideBar";
 import Footer from "../../components/navigation/footer";
 import MobileMenu from "../../components/navigation/mobileNav";
@@ -12,11 +13,11 @@ export default function AboutPage() {
                 <SideBar />
                 <main className="top-0 bottom-0 right-0 pt-[40px] px-10 pb-10 relative min-h-[100vh] max-w-[50vh] border-b-[1px] border-b-secondary1">
                     <p>
-                        I recently graduated from McGill University in 2026, where I studied Computer Science and Sociology.
+                        I recently graduated from McGill University in 2026, where I studied <a href="https://www.cs.mcgill.ca/" target="_blank" rel="noreferrer noopener" className="text-accent-500 hover:text-accent-600">Computer Science</a> and <a href="https://www.mcgill.ca/sociology/" target="_blank" rel="noreferrer noopener" className="text-accent-500 hover:text-accent-600">Sociology</a>.
 
                         Previously, I built software during my internship at Amazon to facilitate large-scale service migrations between Amazon Web Services regions for thousands of teams and developed an internal tool to streamline lead enrichment at Business-Software.com.
                     
-                        At McGill, I led teams building software for social-impact organizations at Hack4Impact McGill and drove innovation by organizing CodeJam, McGill Engineering's largest hackathon.    
+                        At McGill, I led teams building software for social-impact organizations at <a href="https://mcgill.hack4impact.org/" target="_blank" rel="noreferrer noopener" className="text-accent-500 hover:text-accent-600">Hack4Impact McGill</a> and drove innovation by organizing <a href="https://codejam.mcgilleus.ca/" target="_blank" rel="noreferrer noopener" className="text-accent-500 hover:text-accent-600">CodeJam, McGill Engineering&apos;s largest hackathon</a>.    
                     </p>
                     <br></br>
                     <p>
@@ -42,7 +43,7 @@ export default function AboutPage() {
                     </ol>
                     <br></br>
                     <p>
-                        Outside of work, I photograph concerts and write about music.
+                        Outside of work, I <Link href="/photography#live-music" className="text-accent-500 hover:text-accent-600">photograph concerts</Link> and write about music.
                     </p>
                 </main>
             </div>

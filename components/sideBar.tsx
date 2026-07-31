@@ -40,9 +40,10 @@ export default function SideBar() {
             <div className="w-full mt-auto grid grid-cols-2 items-end">
                 <div className="col-span-1">
                     {[
-                        ['https://github.com/ReiKong', 'GitHub'],
-                        ['https:///www.linkedin.com/in/rei-kong/', "LinkedIn"],
+                        ["https://github.com/ReiKong", "GitHub"],
+                        ["https:///www.linkedin.com/in/rei-kong/", "LinkedIn"],
                         ["https://open.spotify.com/user/reiquem", "Spotify"],
+                        ["https://curius.app/rei-kong", "What I'm Reading"],
                     ].map(([link, display]) => (
                         <a
                             className="text-secondary1 text-[16px] flex flex-row transition-colors duration-300 hover:font-serif"

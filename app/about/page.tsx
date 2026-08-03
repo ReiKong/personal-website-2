@@ -45,7 +45,7 @@ export default function AboutPage() {
                     </ol>
                     <br></br>
                     <p>
-                        Outside of work, I <Link href="/photography#live-music" className="text-accent-500 hover:text-accent-600">photograph concerts</Link> and write about music.
+                        Outside of work, I <Link href="/photography#live-music" className="text-accent-500 hover:text-accent-600">photograph concerts</Link>, write about music, and solve logic puzzles.
                     </p>
                 </main>
             </div>

@@ -21,7 +21,9 @@ export default function AboutPage() {
                     </p>
                     <br></br>
                     <p>
-                        I care about craft, grit, and raising the bar—for myself, my work, and the people around me—while always making room for good banter and better questions.
+                        I care about craft, grit, and raising the bar—for myself, my work, and the people around me—while making room for good banter and better questions.
+
+                        I'm forever learning and standing on the shoulders of giants.
 
                         I'm fascinated by people; I love good conversation to understand how they function, what they care about, and why they do what they do.
 
@@ -29,7 +31,7 @@ export default function AboutPage() {
 
                         Living across three countries has introduced me to very cool people with vastly different experiences and perspectives.
 
-                        Conversation is one of the main ways I make sense of the world and challenge my own assumptions.
+                        Conversation is one of the main ways I make sense of the world and challenge my own assumptions, and I find it makes us kinder too.
 
                         Some questions I like to ask people:
                     </p>
